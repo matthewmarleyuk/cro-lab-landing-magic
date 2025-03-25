@@ -56,7 +56,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.name}
-              className={`rounded-xl p-8 transition-all duration-500 transform bg-gradient-to-br from-white to-secondary/50 border border-secondary shadow-md hover:shadow-lg ${
+              className={`rounded-xl p-8 transition-all duration-500 transform bg-palette-purple text-white border border-palette-purple/30 shadow-md hover:shadow-lg ${
                 testimonialsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${400 + index * 100}ms` }}
@@ -66,10 +66,10 @@ const Testimonials = () => {
                   <Star key={i} className="w-5 h-5 text-palette-yellow fill-palette-yellow" />
                 ))}
               </div>
-              <p className="text-foreground mb-6 italic">"{testimonial.content}"</p>
+              <p className="text-white mb-6 italic">"{testimonial.content}"</p>
               <div className="mt-auto">
-                <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                <h4 className="font-semibold text-white">{testimonial.name}</h4>
+                <p className="text-sm text-white/90">{testimonial.position}</p>
               </div>
             </div>
           ))}

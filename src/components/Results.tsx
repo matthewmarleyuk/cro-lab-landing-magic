@@ -48,7 +48,7 @@ const Results = () => {
             titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-secondary border border-border">
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-palette-purple text-white border border-palette-purple">
             Results
           </span>
           <h2 className="heading-lg mb-6">
@@ -66,7 +66,7 @@ const Results = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={study.title}
-              className={`bg-[#2E294E] text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
+              className={`bg-palette-purple text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
                 casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 150}ms` }}
