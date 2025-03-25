@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { MoveRight, Activity, Lightbulb, Beaker, PanelRight, MousePointer, Target } from 'lucide-react';
@@ -49,7 +48,7 @@ const Services = () => {
   const { containerRef: servicesRef, visibleItems: servicesVisible } = useStaggeredAnimation(services, 100);
 
   return (
-    <section id="services" className="py-24 md:py-32 bg-secondary/50 relative">
+    <section id="services" className="py-16 md:py-20 bg-secondary/50 relative">
       <div className="container px-6 mx-auto">
         <div 
           ref={titleRef} 

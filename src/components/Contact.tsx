@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -19,7 +18,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-secondary/50 relative">
+    <section id="contact" className="py-16 md:py-20 bg-secondary/50 relative">
       <div className="container px-6 mx-auto">
         <div 
           ref={titleRef} 
@@ -168,7 +167,6 @@ const Contact = () => {
         </div>
       </div>
       
-      {/* Background elements */}
       <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-cro-300/10 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-cro-400/5 filter blur-3xl -z-10"></div>
     </section>

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { ArrowUpRight } from 'lucide-react';
@@ -40,7 +39,7 @@ const Results = () => {
   const { containerRef: casesRef, visibleItems: casesVisible } = useStaggeredAnimation(caseStudies, 150);
 
   return (
-    <section id="results" className="py-24 md:py-32 relative">
+    <section id="results" className="py-16 md:py-20 relative">
       <div className="container px-6 mx-auto">
         <div 
           ref={titleRef} 
