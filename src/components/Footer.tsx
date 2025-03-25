@@ -51,29 +51,29 @@ const Footer = () => {
             <h4 className="font-semibold text-base mb-4">Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   CRO Audit
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   A/B Testing
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   UX Research
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   Landing Page Optimization
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   Website Personalization
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
