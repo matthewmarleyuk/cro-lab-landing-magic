@@ -90,8 +90,8 @@ const About = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-cro-200/10 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-primary/5 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-palette-magenta/10 filter blur-3xl -z-10"></div>
     </section>
   );
 };

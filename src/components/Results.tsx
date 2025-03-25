@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { ArrowUpRight } from 'lucide-react';
@@ -39,7 +40,7 @@ const Results = () => {
   const { containerRef: casesRef, visibleItems: casesVisible } = useStaggeredAnimation(caseStudies, 150);
 
   return (
-    <section id="results" className="py-16 md:py-20 relative">
+    <section id="results" className="py-16 md:py-20 relative overflow-hidden">
       <div className="container px-6 mx-auto">
         <div 
           ref={titleRef} 
@@ -114,8 +115,8 @@ const Results = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-cro-300/10 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-cro-200/10 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-palette-magenta/10 filter blur-3xl -z-10"></div>
     </section>
   );
 };
