@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+
 const Contact = () => {
   const {
     ref: titleRef,
@@ -18,11 +18,13 @@ const Contact = () => {
     ref: infoRef,
     isVisible: infoVisible
   } = useFadeIn(0.1);
+
   const benefits = ['Free conversion audit for new clients', 'No long-term contracts - we earn your business monthly', 'Results-based performance guarantees', 'Direct communication with optimization experts'];
+
   return <section id="contact" className="py-16 md:py-20 bg-secondary/50 relative">
       <div className="container px-6 mx-auto">
         <div ref={titleRef} className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 delay-200 transform ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-white border border-border">
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-pink-200 border border-pink-300">
             Get Started
           </span>
           <h2 className="heading-lg mb-6">
