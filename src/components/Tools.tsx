@@ -36,7 +36,7 @@ const Tools = () => {
           <h2 className="heading-lg mb-6">
             World-class CRO tools for optimal results
           </h2>
-          <p className="body-md text-muted-foreground px-[129px]">
+          <p className="body-md text-muted-foreground px-0">
             We leverage industry-leading tools and technologies to deliver data-driven optimization strategies.
           </p>
         </div>
