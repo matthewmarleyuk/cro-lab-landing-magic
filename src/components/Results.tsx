@@ -66,7 +66,7 @@ const Results = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={study.title}
-              className={`bg-palette-purple text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
+              className={`bg-[#2E294E] text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
                 casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 150}ms` }}

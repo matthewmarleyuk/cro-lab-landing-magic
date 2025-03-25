@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { SearchCheck, LineChart, Beaker, Target } from 'lucide-react';
@@ -63,33 +64,33 @@ const Process = () => {
           {steps.map((step, index) => (
             <div 
               key={step.title}
-              className={`rounded-xl p-8 transition-all duration-500 transform bg-gradient-to-br from-white to-muted border border-border shadow-md hover:shadow-lg relative z-10 ${
+              className={`rounded-xl p-8 transition-all duration-500 transform bg-[#2E294E] text-white border border-[#2E294E]/30 shadow-md hover:shadow-lg relative z-10 ${
                 stepsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${400 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-palette-lilac/20 p-3 inline-flex mb-5">
-                {step.icon}
+              <div className="rounded-full bg-white/20 p-3 inline-flex mb-5">
+                {React.cloneElement(step.icon, { className: "h-6 w-6 text-white" })}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white">{step.title}</h3>
+              <p className="text-white/90">{step.description}</p>
               
               {/* Connector dots visible on desktop */}
               {index > 0 && (
-                <div className="absolute w-3 h-3 rounded-full bg-palette-purple lg:block hidden -left-1.5 top-1/2 -translate-y-1/2 border border-white"></div>
+                <div className="absolute w-3 h-3 rounded-full bg-[#2E294E] lg:block hidden -left-1.5 top-1/2 -translate-y-1/2 border border-white"></div>
               )}
               
               {index < steps.length - 1 && (
-                <div className="absolute w-3 h-3 rounded-full bg-palette-purple lg:block hidden -right-1.5 top-1/2 -translate-y-1/2 border border-white"></div>
+                <div className="absolute w-3 h-3 rounded-full bg-[#2E294E] lg:block hidden -right-1.5 top-1/2 -translate-y-1/2 border border-white"></div>
               )}
               
               {/* Vertical connectors for tablet */}
               {index > 0 && (
-                <div className="absolute h-3 w-3 rounded-full bg-palette-purple md:block lg:hidden hidden top-0 left-1/2 -translate-y-1.5 -translate-x-1/2 border border-white"></div>
+                <div className="absolute h-3 w-3 rounded-full bg-[#2E294E] md:block lg:hidden hidden top-0 left-1/2 -translate-y-1.5 -translate-x-1/2 border border-white"></div>
               )}
               
               {index < steps.length - 1 && (
-                <div className="absolute h-3 w-3 rounded-full bg-palette-purple md:block lg:hidden hidden bottom-0 left-1/2 translate-y-1.5 -translate-x-1/2 border border-white"></div>
+                <div className="absolute h-3 w-3 rounded-full bg-[#2E294E] md:block lg:hidden hidden bottom-0 left-1/2 translate-y-1.5 -translate-x-1/2 border border-white"></div>
               )}
             </div>
           ))}

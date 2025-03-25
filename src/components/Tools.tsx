@@ -63,7 +63,7 @@ const Tools = () => {
           {tools.map((tool, index) => (
             <div 
               key={tool.name}
-              className={`rounded-xl p-8 transition-all duration-500 transform bg-palette-purple text-white border border-palette-purple/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
+              className={`rounded-xl p-8 transition-all duration-500 transform bg-[#2E294E] text-white border border-[#2E294E]/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                 toolsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}

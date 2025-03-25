@@ -75,19 +75,19 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className={`rounded-xl p-6 transition-all duration-500 transform bg-[#b00250] text-white border border-[#b00250]/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
+              className={`rounded-xl p-6 transition-all duration-500 transform bg-[#2E294E] text-white border border-[#2E294E]/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                 servicesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
               <div className="rounded-full bg-white/20 p-3 inline-flex mb-5">
-                {service.icon}
+                {React.cloneElement(service.icon, { className: "h-6 w-6 text-white" })}
               </div>
-              <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
               <p className="text-sm text-white/90 mb-4">{service.description}</p>
               <ul className="space-y-2">
                 {service.items.map((item, i) => (
-                  <li key={i} className="flex items-center text-sm">
+                  <li key={i} className="flex items-center text-sm text-white/90">
                     <div className="h-1.5 w-1.5 rounded-full bg-white mr-2"></div>
                     {item}
                   </li>
