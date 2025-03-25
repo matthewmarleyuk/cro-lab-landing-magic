@@ -53,12 +53,18 @@ const Process = () => {
         
         <div 
           ref={stepsRef}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
         >
+          {/* Connecting lines for desktop */}
+          <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-1 bg-gradient-to-r from-palette-purple/30 via-palette-magenta/30 to-palette-purple/30 -translate-y-1/2 z-0"></div>
+          
+          {/* Connecting lines for tablet */}
+          <div className="hidden md:block lg:hidden absolute left-1/2 top-[25%] bottom-[25%] w-1 bg-gradient-to-b from-palette-purple/30 via-palette-magenta/30 to-palette-purple/30 -translate-x-1/2 z-0"></div>
+          
           {steps.map((step, index) => (
             <div 
               key={step.title}
-              className={`rounded-xl p-8 transition-all duration-500 transform bg-gradient-to-br from-white to-muted border border-border shadow-md hover:shadow-lg ${
+              className={`rounded-xl p-8 transition-all duration-500 transform bg-gradient-to-br from-white to-muted border border-border shadow-md hover:shadow-lg relative z-10 ${
                 stepsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${400 + index * 100}ms` }}
@@ -68,12 +74,24 @@ const Process = () => {
               </div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-muted-foreground">{step.description}</p>
-              <div className="mt-6 flex items-center justify-center">
-                <div className="relative w-12 h-12 flex items-center justify-center">
-                  <div className="absolute inset-0 rounded-full bg-palette-purple/10 animate-pulse"></div>
-                  <span className="text-xl font-bold text-palette-purple">0{index + 1}</span>
-                </div>
-              </div>
+              
+              {/* Connector dots visible on all devices */}
+              <div className={`absolute w-4 h-4 rounded-full bg-palette-purple ${
+                index === 0 ? 'hidden' : 'lg:block hidden'
+              } -left-2 top-1/2 -translate-y-1/2`}></div>
+              
+              <div className={`absolute w-4 h-4 rounded-full bg-palette-purple ${
+                index === steps.length - 1 ? 'hidden' : 'lg:block hidden'
+              } -right-2 top-1/2 -translate-y-1/2`}></div>
+              
+              {/* Vertical connectors for tablet */}
+              <div className={`absolute h-4 w-4 rounded-full bg-palette-purple ${
+                index === 0 ? 'hidden' : 'md:block lg:hidden hidden'
+              } top-0 left-1/2 -translate-y-1/2 -translate-x-1/2`}></div>
+              
+              <div className={`absolute h-4 w-4 rounded-full bg-palette-purple ${
+                index === steps.length - 1 ? 'hidden' : 'md:block lg:hidden hidden'
+              } bottom-0 left-1/2 translate-y-1/2 -translate-x-1/2`}></div>
             </div>
           ))}
         </div>
