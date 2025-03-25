@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
-import { MoveRight, Activity, Lightbulb, Flask, PanelRight, MousePointer, Target } from 'lucide-react';
+import { MoveRight, Activity, Lightbulb, Beaker, PanelRight, MousePointer, Target } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Services = () => {
@@ -21,7 +21,7 @@ const Services = () => {
       items: ['Hypothesis development', 'Test implementation', 'Results analysis & reporting']
     },
     {
-      icon: <Flask className="h-6 w-6" />,
+      icon: <Beaker className="h-6 w-6" />,
       title: 'UX Research',
       description: 'In-depth user research to understand behaviors, motivations and pain points.',
       items: ['User interviews', 'Usability testing', 'Heatmap & session recording']
