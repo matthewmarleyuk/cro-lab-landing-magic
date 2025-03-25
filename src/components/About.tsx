@@ -96,8 +96,9 @@ const About = () => {
         </div>
       </div>
       
-      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-palette-magenta/10 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-palette-magenta/20 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/3 left-1/3 w-60 h-60 rounded-full bg-palette-yellow/15 filter blur-3xl -z-10"></div>
     </section>
   );
 };

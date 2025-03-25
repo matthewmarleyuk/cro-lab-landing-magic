@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { Star } from 'lucide-react';
@@ -59,8 +60,10 @@ const Testimonials = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-palette-yellow/10 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-palette-yellow/20 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/2 left-1/4 w-60 h-60 rounded-full bg-palette-magenta/15 filter blur-2xl -z-10"></div>
+      <div className="absolute bottom-10 right-1/3 w-72 h-72 rounded-full bg-accent/15 filter blur-3xl -z-10"></div>
     </section>;
 };
 export default Testimonials;

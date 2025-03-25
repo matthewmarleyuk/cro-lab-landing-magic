@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { MoveRight, Activity, Lightbulb, Beaker, PanelRight, MousePointer, Target } from 'lucide-react';
@@ -112,8 +113,10 @@ const Services = () => {
         </div>
       </div>
       
-      <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-palette-magenta/10 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-palette-magenta/20 filter blur-3xl -z-10"></div>
+      <div className="absolute top-10 right-1/4 w-64 h-64 rounded-full bg-palette-yellow/15 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-20 left-1/4 w-56 h-56 rounded-full bg-accent/15 filter blur-3xl -z-10"></div>
     </section>
   );
 };
