@@ -5,6 +5,7 @@ import Index from '@/pages/Index';
 import NotFound from '@/pages/NotFound';
 import Edinburgh from '@/pages/Edinburgh';
 import Glasgow from '@/pages/Glasgow';
+import Liverpool from '@/pages/Liverpool';
 import './App.css';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path="/" element={<Index />} />
       <Route path="/edinburgh" element={<Edinburgh />} />
       <Route path="/glasgow" element={<Glasgow />} />
+      <Route path="/liverpool" element={<Liverpool />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
