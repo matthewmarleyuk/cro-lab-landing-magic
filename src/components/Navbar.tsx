@@ -42,7 +42,7 @@ const Navbar = () => {
           <img 
             src="/lovable-uploads/cro-favicon.png" 
             alt="CRO Lab Logo" 
-            className="h-5 w-5 text-palette-navy" 
+            className="h-8 w-8" 
           />
           <span className="text-xl font-bold tracking-tight">
             <span className="text-palette-navy">The </span>
@@ -82,7 +82,7 @@ const Navbar = () => {
                 <img 
                   src="/lovable-uploads/cro-favicon.png" 
                   alt="CRO Lab Logo" 
-                  className="h-5 w-5 text-palette-navy" 
+                  className="h-8 w-8" 
                 />
                 <span className="text-lg font-bold">
                   <span className="text-palette-navy">The </span>
