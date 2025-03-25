@@ -13,6 +13,7 @@ import Process from '@/components/Process';
 import Tools from '@/components/Tools';
 import EdinburghCTA from '@/components/EdinburghCTA';
 import { Card, CardContent } from '@/components/ui/card';
+import { AvatarGroup } from '@/components/ui/avatar-group';
 
 const Edinburgh = () => {
   useEffect(() => {
@@ -75,7 +76,7 @@ const Edinburgh = () => {
                 The CRO Lab helps Edinburgh businesses optimize their websites to convert more visitors into customers through scientific testing and data analysis.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 mb-12 justify-center md:justify-start">
+              <div className="flex flex-col sm:flex-row gap-4 mb-6 justify-center md:justify-start">
                 <Button size="lg" className="rounded-full px-6 py-6 text-base bg-palette-magenta hover:bg-palette-magenta/90">
                   Get Edinburgh CRO Analysis
                   <ChevronRight className="ml-1 h-5 w-5" />
@@ -84,6 +85,10 @@ const Edinburgh = () => {
                   Our Edinburgh Case Studies
                   <ChevronRight className="ml-1 h-5 w-5" />
                 </Button>
+              </div>
+
+              <div className="flex justify-center md:justify-start mb-12">
+                <AvatarGroup />
               </div>
             </div>
           </div>
