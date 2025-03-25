@@ -63,16 +63,16 @@ const Tools = () => {
           {tools.map((tool, index) => (
             <div 
               key={tool.name}
-              className={`glass-card rounded-xl p-8 transition-all duration-500 transform flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 border border-border ${
+              className={`rounded-xl p-8 transition-all duration-500 transform bg-palette-purple text-white border border-palette-purple/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                 toolsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-palette-lilac p-4 inline-flex mb-5">
-                {tool.icon}
+              <div className="rounded-full bg-white/20 p-4 inline-flex mb-5">
+                {React.cloneElement(tool.icon, { className: "h-10 w-10 text-white" })}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-palette-navy">{tool.name}</h3>
-              <p className="text-sm text-muted-foreground">{tool.description}</p>
+              <h3 className="text-xl font-semibold mb-2 text-white">{tool.name}</h3>
+              <p className="text-sm text-white/90">{tool.description}</p>
             </div>
           ))}
         </div>

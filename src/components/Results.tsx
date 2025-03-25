@@ -66,7 +66,7 @@ const Results = () => {
           {caseStudies.map((study, index) => (
             <div 
               key={study.title}
-              className={`glass-card rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
+              className={`bg-palette-purple text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
                 casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 150}ms` }}
@@ -86,18 +86,18 @@ const Results = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-lg font-semibold mb-4">{study.title}</h3>
+                <h3 className="text-lg font-semibold mb-4 text-white">{study.title}</h3>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   {study.metrics.map((metric) => (
-                    <div key={metric.label} className="bg-secondary rounded-lg p-3">
-                      <div className="text-2xl font-bold mb-1">{metric.value}</div>
-                      <div className="text-xs text-muted-foreground">{metric.label}</div>
+                    <div key={metric.label} className="bg-white/10 rounded-lg p-3">
+                      <div className="text-2xl font-bold mb-1 text-white">{metric.value}</div>
+                      <div className="text-xs text-white/80">{metric.label}</div>
                     </div>
                   ))}
                 </div>
                 
-                <Button variant="ghost" className="p-0 h-auto font-medium" size="sm">
+                <Button variant="ghost" className="p-0 h-auto font-medium text-white hover:bg-white/10 hover:text-white" size="sm">
                   View case study
                   <ArrowUpRight className="ml-1 h-4 w-4" />
                 </Button>
