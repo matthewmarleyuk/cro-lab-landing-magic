@@ -10,7 +10,7 @@ import EdinburghAbout from '@/components/EdinburghAbout';
 import EdinburghServices from '@/components/EdinburghServices';
 import EdinburghTestimonials from '@/components/EdinburghTestimonials';
 import EdinburghProcess from '@/components/EdinburghProcess';
-import EdinburghTechStack from '@/components/EdinburghTechStack';
+import Tools from '@/components/Tools';
 import EdinburghCTA from '@/components/EdinburghCTA';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -102,8 +102,8 @@ const Edinburgh = () => {
         {/* Process Section */}
         <EdinburghProcess />
 
-        {/* Tech Stack Section */}
-        <EdinburghTechStack />
+        {/* Tech Stack Section - Now using the shared Tools component */}
+        <Tools />
         
         {/* Edinburgh Case Studies */}
         <section className="py-16 relative overflow-hidden bg-white">
