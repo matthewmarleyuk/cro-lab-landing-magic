@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { ArrowUpRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const Results = () => {
   const {
     ref: titleRef,
@@ -61,7 +61,7 @@ const Results = () => {
         </div>
         
         <div ref={casesRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => <div key={study.title} className={`bg-palette-purple text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{
+          {caseStudies.map((study, index) => <div key={study.title} className={`bg-[#270A56] text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{
           transitionDelay: `${300 + index * 150}ms`
         }}>
               <div className="relative h-48 overflow-hidden">
