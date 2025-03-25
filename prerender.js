@@ -9,12 +9,14 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
+// Add Edinburgh to the routes to prerender
 const routesToPrerender = fs
   .readdirSync(toAbsolute('src/pages'))
   .map((file) => {
     const name = file.replace(/\.tsx$/, '').toLowerCase()
     return name === 'index' ? '/' : `/${name}`
   })
+  .filter(route => route !== '/notfound') // Exclude NotFound from prerendering
 
 ;(async () => {
   for (const url of routesToPrerender) {

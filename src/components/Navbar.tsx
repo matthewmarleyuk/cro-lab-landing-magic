@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils';
 import { ChevronRight, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,6 +25,7 @@ const Navbar = () => {
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
     { name: 'Results', href: '#results' },
+    { name: 'Edinburgh', href: '/edinburgh' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -35,8 +37,8 @@ const Navbar = () => {
       )}
     >
       <div className="container flex items-center justify-between">
-        <a 
-          href="#" 
+        <Link 
+          to="/" 
           className="flex items-center space-x-2"
         >
           <img 
@@ -49,18 +51,28 @@ const Navbar = () => {
             <span className="shimmer-text">CRO</span>
             <span className="text-palette-navy"> Lab</span>
           </span>
-        </a>
+        </Link>
         
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-palette-purple transition-smooth"
-            >
-              {link.name}
-            </a>
+            link.href.startsWith('#') ? (
+              <a
+                key={link.name}
+                href={link.href}
+                className="text-sm font-medium text-foreground/80 hover:text-palette-purple transition-smooth"
+              >
+                {link.name}
+              </a>
+            ) : (
+              <Link
+                key={link.name}
+                to={link.href}
+                className="text-sm font-medium text-foreground/80 hover:text-palette-purple transition-smooth"
+              >
+                {link.name}
+              </Link>
+            )
           ))}
           <Button className="rounded-full bg-palette-magenta hover:bg-palette-magenta/90">
             Get Started
@@ -99,13 +111,23 @@ const Navbar = () => {
             </div>
             <nav className="flex flex-col space-y-6 pt-8">
               {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-base font-medium hover:text-palette-purple transition-smooth"
-                >
-                  {link.name}
-                </a>
+                link.href.startsWith('#') ? (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className="text-base font-medium hover:text-palette-purple transition-smooth"
+                  >
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.name}
+                    to={link.href}
+                    className="text-base font-medium hover:text-palette-purple transition-smooth"
+                  >
+                    {link.name}
+                  </Link>
+                )
               ))}
               <Button className="w-full justify-center rounded-full mt-4 bg-palette-magenta hover:bg-palette-magenta/90">
                 Get Started
