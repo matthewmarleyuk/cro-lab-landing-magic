@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { MoveRight, Activity, Lightbulb, Beaker, PanelRight, MousePointer, Target } from 'lucide-react';
@@ -74,12 +75,12 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className={`glass-card rounded-xl p-6 transition-all duration-500 transform ${
+              className={`rounded-xl p-6 transition-all duration-500 transform bg-accent/10 backdrop-blur-md border border-accent/20 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                 servicesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-secondary p-3 inline-flex mb-5">
+              <div className="rounded-full bg-accent/20 p-3 inline-flex mb-5">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
@@ -92,7 +93,7 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 pt-4 border-t border-border">
+              <div className="mt-6 pt-4 border-t border-accent/30">
                 <Button variant="ghost" className="p-0 h-auto font-medium" size="sm">
                   Learn more
                   <MoveRight className="ml-1 h-4 w-4" />
