@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { ArrowUpRight } from 'lucide-react';
@@ -48,7 +49,7 @@ const Results = () => {
   return <section id="results" className="py-16 md:py-20 relative overflow-hidden">
       <div className="container px-6 mx-auto">
         <div ref={titleRef} className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 delay-200 transform ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 mb-6 font-medium rounded-full bg-palette-purple text-white border border-palette-purple text-[D90368]">
+          <span className="inline-block px-4 py-1.5 mb-6 font-medium rounded-full bg-palette-magenta text-white border border-palette-magenta">
             Results
           </span>
           <h2 className="heading-lg mb-6">
@@ -92,7 +93,7 @@ const Results = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <Button size="lg" className="rounded-full">
+          <Button size="lg" className="rounded-full bg-palette-magenta hover:bg-palette-magenta/90 text-white">
             View All Case Studies
             <ArrowUpRight className="ml-1 h-5 w-5" />
           </Button>
