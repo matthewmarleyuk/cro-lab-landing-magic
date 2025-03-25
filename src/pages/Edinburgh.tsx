@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -8,7 +9,7 @@ import EdinburghClients from '@/components/EdinburghClients';
 import EdinburghAbout from '@/components/EdinburghAbout';
 import EdinburghServices from '@/components/EdinburghServices';
 import EdinburghTestimonials from '@/components/EdinburghTestimonials';
-import EdinburghProcess from '@/components/EdinburghProcess';
+import Process from '@/components/Process';
 import Tools from '@/components/Tools';
 import EdinburghCTA from '@/components/EdinburghCTA';
 import { Card, CardContent } from '@/components/ui/card';
@@ -94,7 +95,7 @@ const Edinburgh = () => {
 
         <EdinburghTestimonials />
 
-        <EdinburghProcess />
+        <Process />
 
         <Tools />
         
