@@ -5,8 +5,8 @@ import Footer from '@/components/Footer';
 import ContactHero from '@/components/ContactHero';
 import ContactForm from '@/components/ContactForm';
 import Testimonials from '@/components/Testimonials';
-import ContactFAQ from '@/components/ContactFAQ';
 import Process from '@/components/Process';
+import ContactFAQ from '@/components/ContactFAQ';
 
 const Contact = () => {
   return (
@@ -16,8 +16,8 @@ const Contact = () => {
         <ContactHero />
         <ContactForm />
         <Testimonials />
-        <ContactFAQ />
         <Process />
+        <ContactFAQ />
       </main>
       <Footer />
     </div>
