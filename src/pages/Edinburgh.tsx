@@ -5,7 +5,6 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, MapPin, TrendingUp, BarChart, LineChart } from 'lucide-react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
-import EdinburghClients from '@/components/EdinburghClients';
 import EdinburghAbout from '@/components/EdinburghAbout';
 import EdinburghServices from '@/components/EdinburghServices';
 import EdinburghTestimonials from '@/components/EdinburghTestimonials';
@@ -148,8 +147,6 @@ const Edinburgh = () => {
         </section>
 
         <EdinburghCTA />
-
-        <EdinburghClients />
       </main>
       <Footer />
     </div>
