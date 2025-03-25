@@ -43,7 +43,7 @@ const About = () => {
                 titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-secondary border border-border">
+              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-palette-purple text-white border border-palette-purple">
                 About The CRO Lab
               </span>
               <h2 className="heading-lg mb-6">
