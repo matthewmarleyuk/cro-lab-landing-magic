@@ -22,7 +22,9 @@ const Index = () => {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <About />
+        <div className="-mt-16">
+          <About />
+        </div>
         <Services />
         <Testimonials />
         <Process />
