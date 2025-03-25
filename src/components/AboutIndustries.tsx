@@ -7,34 +7,40 @@ import { Heart, Briefcase, Globe, Droplet, PawPrint, Wine } from 'lucide-react';
 
 const industryData = [
   {
-    icon: <Heart className="h-6 w-6 text-palette-magenta" />,
+    icon: <Heart className="h-6 w-6 text-white" />,
     name: 'Healthcare',
-    description: 'Optimizing patient journeys and healthcare service conversions'
+    description: 'Optimizing patient journeys and healthcare service conversions',
+    color: 'bg-palette-magenta'
   },
   {
-    icon: <Globe className="h-6 w-6 text-palette-purple" />,
+    icon: <Globe className="h-6 w-6 text-white" />,
     name: 'Travel',
-    description: 'Improving booking conversions and travel experience flows'
+    description: 'Improving booking conversions and travel experience flows',
+    color: 'bg-palette-purple'
   },
   {
-    icon: <Briefcase className="h-6 w-6 text-palette-navy" />,
+    icon: <Briefcase className="h-6 w-6 text-white" />,
     name: 'Finance',
-    description: 'Enhancing financial service signups and application completions'
+    description: 'Enhancing financial service signups and application completions',
+    color: 'bg-palette-magenta'
   },
   {
-    icon: <Droplet className="h-6 w-6 text-palette-purple" />,
+    icon: <Droplet className="h-6 w-6 text-white" />,
     name: 'Utilities',
-    description: 'Streamlining service selection and customer onboarding'
+    description: 'Streamlining service selection and customer onboarding',
+    color: 'bg-palette-purple'
   },
   {
-    icon: <PawPrint className="h-6 w-6 text-palette-magenta" />,
+    icon: <PawPrint className="h-6 w-6 text-white" />,
     name: 'Pet Industry',
-    description: 'Boosting pet product sales and service engagement'
+    description: 'Boosting pet product sales and service engagement',
+    color: 'bg-palette-magenta'
   },
   {
-    icon: <Wine className="h-6 w-6 text-palette-navy" />,
+    icon: <Wine className="h-6 w-6 text-white" />,
     name: 'Alcohol & Beverages',
-    description: 'Optimizing product discovery and checkout experiences'
+    description: 'Optimizing product discovery and checkout experiences',
+    color: 'bg-palette-purple'
   }
 ];
 
@@ -72,12 +78,12 @@ const AboutIndustries = () => {
                 visibleItems[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <CardContent className="p-8">
-                <div className="h-12 w-12 rounded-full bg-[#F8F4F9] flex items-center justify-center mb-6">
+              <CardContent className={`p-8 ${industry.color} text-white`}>
+                <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
                   {industry.icon}
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-palette-navy">{industry.name}</h3>
-                <p className="text-palette-navy/70">{industry.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-white">{industry.name}</h3>
+                <p className="text-white/90">{industry.description}</p>
               </CardContent>
             </Card>
           ))}
