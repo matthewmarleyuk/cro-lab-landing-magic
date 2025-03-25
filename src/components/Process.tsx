@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 const Process = () => {
@@ -32,10 +33,10 @@ const Process = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-palette-magenta text-white border border-palette-magenta">
             Our Process
           </span>
-          <h2 className="heading-lg mb-6">
+          <h2 className="heading-lg mb-6 text-balance">
             How we optimize your conversion rates
           </h2>
-          <p className="body-md text-muted-foreground px-[75px]">
+          <p className="body-md text-muted-foreground px-[75px] text-balance">
             Our proven methodology combines data analysis, experimentation, and implementation to drive meaningful results.
           </p>
         </div>
@@ -53,8 +54,8 @@ const Process = () => {
                   {step.number}
                 </span>
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{step.title}</h3>
-              <p className="text-white/90">{step.description}</p>
+              <h3 className="text-xl font-semibold mb-3 text-white text-balance">{step.title}</h3>
+              <p className="text-white/90 text-balance">{step.description}</p>
             </div>)}
         </div>
       </div>

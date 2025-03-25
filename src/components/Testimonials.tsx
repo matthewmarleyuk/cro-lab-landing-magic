@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { Star } from 'lucide-react';
@@ -32,10 +33,10 @@ const Testimonials = () => {
           <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-palette-magenta text-white border border-palette-magenta">
             Client Success Stories
           </span>
-          <h2 className="heading-lg mb-6">
+          <h2 className="heading-lg mb-6 text-balance">
             What our clients say about our CRO expertise
           </h2>
-          <p className="body-md text-muted-foreground px-[57px]">
+          <p className="body-md text-muted-foreground px-[57px] text-balance">
             See how we've helped businesses like yours overcome conversion challenges and achieve significant growth.
           </p>
         </div>
@@ -49,10 +50,10 @@ const Testimonials = () => {
               <div className="flex mb-4">
                 {[...Array(testimonial.stars)].map((_, i) => <Star key={i} className="w-5 h-5 text-palette-yellow fill-palette-yellow" />)}
               </div>
-              <p className="text-white mb-6 italic">"{testimonial.content}"</p>
+              <p className="text-white mb-6 italic text-balance">"{testimonial.content}"</p>
               <div className="mt-auto">
-                <h4 className="font-semibold text-white">{testimonial.name}</h4>
-                <p className="text-sm text-white/90">{testimonial.position}</p>
+                <h4 className="font-semibold text-white text-balance">{testimonial.name}</h4>
+                <p className="text-sm text-white/90 text-balance">{testimonial.position}</p>
               </div>
             </div>)}
         </div>
