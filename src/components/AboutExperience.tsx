@@ -1,24 +1,35 @@
+
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Container } from '@/components/ui/container';
 import { Award, Users, BarChart } from 'lucide-react';
+
 const AboutExperience = () => {
   const {
     ref: contentRef,
     isVisible: contentVisible
   } = useFadeIn(0.1);
+  
   const {
     ref: imageRef,
     isVisible: imageVisible
   } = useFadeIn(0.2);
+  
   const {
     ref: statsRef,
     isVisible: statsVisible
   } = useFadeIn(0.3);
-  return <section className="py-20 md:py-28">
+
+  return (
+    <section className="py-20 md:py-28">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div ref={contentRef} className={`transition-all duration-700 delay-100 transform ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <div 
+            ref={contentRef} 
+            className={`transition-all duration-700 delay-100 transform ${
+              contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+            }`}
+          >
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-palette-navy">
               15 Years of Conversion Rate Excellence
             </h2>
@@ -55,15 +66,29 @@ const AboutExperience = () => {
             </div>
           </div>
           
-          <div ref={imageRef} className={`transition-all duration-700 delay-200 transform ${imageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'}`}>
+          <div 
+            ref={imageRef} 
+            className={`transition-all duration-700 delay-200 transform ${
+              imageVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-8'
+            }`}
+          >
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl z-0 bg-[#290941]/10"></div>
-              <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" alt="CRO team analyzing data" className="w-full h-auto rounded-2xl shadow-lg relative z-10" />
+              <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl z-0 bg-palette-navy"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
+                alt="CRO team analyzing data" 
+                className="w-full h-auto rounded-2xl shadow-lg relative z-10" 
+              />
             </div>
           </div>
         </div>
         
-        <div ref={statsRef} className={`grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 transition-all duration-700 delay-300 transform ${statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div 
+          ref={statsRef} 
+          className={`grid grid-cols-1 sm:grid-cols-3 gap-8 mt-20 transition-all duration-700 delay-300 transform ${
+            statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
           <div className="text-center p-8 rounded-xl bg-white shadow-sm border border-gray-100">
             <h3 className="text-5xl font-bold text-palette-purple mb-2">15+</h3>
             <p className="text-palette-navy/70">Years of Experience</p>
@@ -80,6 +105,8 @@ const AboutExperience = () => {
           </div>
         </div>
       </Container>
-    </section>;
+    </section>
+  );
 };
+
 export default AboutExperience;
