@@ -78,9 +78,14 @@ const Tools = () => {
         </div>
       </div>
       
-      {/* Background elements */}
+      {/* Background elements - Enhanced with more blurred elements */}
       <div className="absolute top-1/4 right-0 w-64 h-64 rounded-full bg-palette-purple/5 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-1/4 left-0 w-64 h-64 rounded-full bg-palette-magenta/5 filter blur-3xl -z-10"></div>
+      
+      {/* New blurred elements */}
+      <div className="absolute top-10 left-1/4 w-40 h-40 rounded-full bg-palette-lilac/10 filter blur-2xl -z-10"></div>
+      <div className="absolute bottom-20 right-1/4 w-56 h-56 rounded-full bg-palette-yellow/5 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full bg-palette-purple/3 filter blur-3xl -z-10"></div>
     </section>
   );
 };

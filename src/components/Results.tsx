@@ -114,9 +114,15 @@ const Results = () => {
         </div>
       </div>
       
-      {/* Background elements */}
+      {/* Enhanced background elements */}
       <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-palette-magenta/10 filter blur-3xl -z-10"></div>
+      
+      {/* New blurred elements */}
+      <div className="absolute top-0 left-1/3 w-64 h-64 rounded-full bg-palette-lilac/15 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-10 right-1/3 w-80 h-80 rounded-full bg-palette-yellow/8 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/2 left-1/5 w-48 h-48 rounded-full bg-palette-purple/5 filter blur-2xl -z-10"></div>
+      <div className="absolute bottom-1/3 right-10 w-56 h-56 rounded-full bg-palette-lilac/10 filter blur-2xl -z-10"></div>
     </section>
   );
 };
