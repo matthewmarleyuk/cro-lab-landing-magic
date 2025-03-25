@@ -1,7 +1,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, ChevronRight } from "lucide-react";
+import { MoveRight, ChevronRight, TrendingUp, DollarSign, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AvatarGroup } from "@/components/ui/avatar-group";
 
@@ -89,16 +89,16 @@ function Hero() {
           {/* Stats section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
             {[
-              { value: '147%', label: 'Avg. Conversion Lift' },
-              { value: '23.4%', label: 'Revenue Increase' },
-              { value: '79%', label: 'Higher ROI' },
+              { value: '147%', label: 'Avg. Conversion Lift', icon: <TrendingUp className="h-5 w-5" /> },
+              { value: '23.4%', label: 'Revenue Increase', icon: <DollarSign className="h-5 w-5" /> },
+              { value: '79%', label: 'Higher ROI', icon: <BarChart className="h-5 w-5" /> },
             ].map((stat) => (
-              <div key={stat.label} className="glass-card rounded-xl p-6 flex flex-col items-center">
-                <div className="rounded-full bg-palette-cream p-2 mb-3">
-                  <MoveRight className="h-5 w-5" />
+              <div key={stat.label} className="glass-card rounded-xl p-6 flex flex-col items-center" style={{ backgroundColor: "#270A56" }}>
+                <div className="rounded-full bg-white/20 backdrop-blur-sm p-2 mb-3">
+                  {stat.icon}
                 </div>
-                <div className="text-3xl font-bold mb-1 text-palette-purple">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-3xl font-bold mb-1 text-white">{stat.value}</div>
+                <div className="text-sm text-white/80">{stat.label}</div>
               </div>
             ))}
           </div>
