@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { 
@@ -22,7 +21,7 @@ const Tools = () => {
       description: 'Heatmaps, recordings, and user feedback'
     },
     {
-      icon: <Activity className="h-10 w-10" />,
+      icon: <img src="/lovable-uploads/e4fe8ab7-1e91-442f-a993-7f443aba2a7a.png" alt="Full Story" className="h-10 w-10 object-contain" />,
       name: 'Full Story',
       description: 'Session replay and user experience analytics'
     },
