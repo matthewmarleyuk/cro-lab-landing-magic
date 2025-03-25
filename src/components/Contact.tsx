@@ -27,7 +27,7 @@ const Contact = () => {
           <h2 className="heading-lg mb-6">
             Ready to dramatically improve your conversion rates?
           </h2>
-          <p className="body-md text-muted-foreground px-[84px]">
+          <p className="body-md text-muted-foreground px-0">
             Contact us today for a free consultation and discover how we can help you optimize your website for better results.
           </p>
         </div>
