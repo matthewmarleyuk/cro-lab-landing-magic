@@ -12,25 +12,25 @@ const About = () => {
       icon: <Beaker className="h-5 w-5" />,
       title: 'Scientific Approach',
       description: 'We use a hypothesis-driven methodology and statistical significance to deliver reliable results.',
-      bgColor: '#D90368' // Pink (magenta from the palette)
+      bgColor: '#D90368' // Pink (magenta from the palette) - top left
     },
     {
       icon: <LineChart className="h-5 w-5" />,
       title: 'Data-Driven Decisions',
       description: 'Every optimization is backed by comprehensive analytics and user behavior insights.',
-      bgColor: '#541388' // Purple from the palette
+      bgColor: '#541388' // Purple from the palette - top right
     },
     {
       icon: <SearchCheck className="h-5 w-5" />,
       title: 'Continuous Testing',
       description: 'Our iterative testing process ensures your website constantly improves over time.',
-      bgColor: '#D90368' // Pink (magenta from the palette)
+      bgColor: '#541388' // Purple from the palette - bottom left
     },
     {
       icon: <CircleDollarSign className="h-5 w-5" />,
       title: 'ROI Focused',
       description: 'We prioritize changes that directly impact your bottom line and business goals.',
-      bgColor: '#541388' // Purple from the palette
+      bgColor: '#D90368' // Pink (magenta from the palette) - bottom right
     },
   ];
   
