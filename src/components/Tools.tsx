@@ -12,22 +12,22 @@ const Tools = () => {
   
   const tools = [
     {
-      icon: <img src="/lovable-uploads/16dde16b-05cc-4b2a-beef-ce09a18b3e32.png" alt="VWO" className="h-10 w-10 object-contain" />,
+      icon: <img src="/lovable-uploads/16dde16b-05cc-4b2a-beef-ce09a18b3e32.png" alt="VWO" className="h-16 w-16 object-contain" />,
       name: 'VWO',
       description: 'A/B testing and experimentation platform'
     },
     {
-      icon: <img src="/lovable-uploads/9ee7aba2-861e-4c52-a572-b18e7b0b9ffa.png" alt="Hotjar" className="h-10 w-10 object-contain" />,
+      icon: <img src="/lovable-uploads/9ee7aba2-861e-4c52-a572-b18e7b0b9ffa.png" alt="Hotjar" className="h-16 w-16 object-contain" />,
       name: 'Hotjar',
       description: 'Heatmaps, recordings, and user feedback'
     },
     {
-      icon: <img src="/lovable-uploads/e4fe8ab7-1e91-442f-a993-7f443aba2a7a.png" alt="Full Story" className="h-10 w-10 object-contain" />,
+      icon: <img src="/lovable-uploads/e4fe8ab7-1e91-442f-a993-7f443aba2a7a.png" alt="Full Story" className="h-16 w-16 object-contain" />,
       name: 'Full Story',
       description: 'Session replay and user experience analytics'
     },
     {
-      icon: <img src="/lovable-uploads/a58f1534-749d-48c5-b82b-e82f8b9cd0ae.png" alt="Google Analytics" className="h-10 w-10 object-contain" />,
+      icon: <img src="/lovable-uploads/a58f1534-749d-48c5-b82b-e82f8b9cd0ae.png" alt="Google Analytics" className="h-16 w-16 object-contain" />,
       name: 'Google Analytics',
       description: 'Web analytics and conversion tracking'
     },
@@ -73,7 +73,7 @@ const Tools = () => {
             >
               <div className="flex flex-col h-full">
                 <div className="bg-white rounded-t-xl p-6 flex items-center justify-center">
-                  <div className="w-16 h-16 flex items-center justify-center">
+                  <div className="w-24 h-24 flex items-center justify-center">
                     {tool.icon}
                   </div>
                 </div>
