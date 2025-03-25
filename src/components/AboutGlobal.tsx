@@ -18,7 +18,7 @@ const AboutGlobal = () => {
             }`}
           >
             <div className="relative">
-              <div className="absolute -top-4 -right-4 w-full h-full bg-palette-magenta/10 rounded-2xl z-0"></div>
+              <div className="absolute -top-4 -right-4 w-full h-full bg-palette-magenta rounded-2xl z-0"></div>
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
                 alt="Global CRO operations" 
