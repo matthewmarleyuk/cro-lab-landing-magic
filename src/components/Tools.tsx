@@ -17,7 +17,7 @@ const Tools = () => {
       description: 'A/B testing and experimentation platform'
     },
     {
-      icon: <Eye className="h-10 w-10" />,
+      icon: <img src="/lovable-uploads/9ee7aba2-861e-4c52-a572-b18e7b0b9ffa.png" alt="Hotjar" className="h-10 w-10 object-contain" />,
       name: 'Hotjar',
       description: 'Heatmaps, recordings, and user feedback'
     },
