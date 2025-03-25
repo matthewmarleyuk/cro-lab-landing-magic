@@ -54,17 +54,17 @@ const AboutGlobal = () => {
             </p>
             
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="p-3 rounded-lg bg-palette-purple/5 text-center">
-                <p className="font-semibold text-palette-purple">Europe</p>
+              <div className="p-3 rounded-lg bg-palette-purple/5 text-center transition-all duration-300 hover:bg-palette-purple hover:text-white hover:shadow-md hover:-translate-y-1">
+                <p className="font-semibold text-palette-purple transition-colors duration-300 hover:text-white">Europe</p>
               </div>
-              <div className="p-3 rounded-lg bg-palette-purple/5 text-center">
-                <p className="font-semibold text-palette-purple">North America</p>
+              <div className="p-3 rounded-lg bg-palette-purple/5 text-center transition-all duration-300 hover:bg-palette-purple hover:text-white hover:shadow-md hover:-translate-y-1">
+                <p className="font-semibold text-palette-purple transition-colors duration-300 hover:text-white">North America</p>
               </div>
-              <div className="p-3 rounded-lg bg-palette-purple/5 text-center">
-                <p className="font-semibold text-palette-purple">Asia</p>
+              <div className="p-3 rounded-lg bg-palette-purple/5 text-center transition-all duration-300 hover:bg-palette-purple hover:text-white hover:shadow-md hover:-translate-y-1">
+                <p className="font-semibold text-palette-purple transition-colors duration-300 hover:text-white">Asia</p>
               </div>
-              <div className="p-3 rounded-lg bg-palette-purple/5 text-center">
-                <p className="font-semibold text-palette-purple">Australia</p>
+              <div className="p-3 rounded-lg bg-palette-purple/5 text-center transition-all duration-300 hover:bg-palette-purple hover:text-white hover:shadow-md hover:-translate-y-1">
+                <p className="font-semibold text-palette-purple transition-colors duration-300 hover:text-white">Australia</p>
               </div>
             </div>
           </div>
