@@ -8,22 +8,22 @@ const EdinburghProcess = () => {
   const steps = [
     {
       number: 1,
-      title: "Edinburgh Discovery",
+      title: "Discovery",
       description: "We analyze your Edinburgh audience data, identify local user behavior patterns, and uncover conversion opportunities."
     },
     {
       number: 2,
-      title: "Edinburgh Strategy",
+      title: "Strategy",
       description: "We develop a tailored CRO strategy focused on Edinburgh market specifics and your business goals."
     },
     {
       number: 3,
-      title: "Edinburgh Testing",
+      title: "Testing",
       description: "We implement rigorous A/B testing focused on your Edinburgh audience segments and traffic sources."
     },
     {
       number: 4,
-      title: "Edinburgh Results",
+      title: "Results",
       description: "We deliver measurable conversion improvements tailored to your Edinburgh customer base."
     }
   ];

@@ -9,37 +9,37 @@ const EdinburghServices = () => {
   const services = [
     {
       icon: <BarChart3 className="h-5 w-5" />,
-      title: "Edinburgh Landing Page Optimization",
+      title: "Landing Page Optimization",
       description: "We optimize your landing pages to maximize conversions from Edinburgh traffic sources.",
       features: ["A/B testing", "Heat mapping", "Conversion funnel analysis"]
     },
     {
       icon: <MousePointer className="h-5 w-5" />,
-      title: "Edinburgh E-commerce CRO",
+      title: "E-commerce CRO",
       description: "Increase sales and average order value for your Edinburgh e-commerce business.",
       features: ["Product page optimization", "Checkout flow improvement", "Cross-sell optimization"]
     },
     {
       icon: <Users className="h-5 w-5" />,
-      title: "Edinburgh User Experience Research",
+      title: "User Experience Research",
       description: "Understand how Edinburgh customers interact with your website to identify friction points.",
       features: ["User testing with Edinburgh consumers", "Session recordings", "Behavior analytics"]
     },
     {
       icon: <LineChart className="h-5 w-5" />,
-      title: "Edinburgh Conversion Analytics",
+      title: "Conversion Analytics",
       description: "Advanced analytics setup and tracking specifically for Edinburgh website traffic.",
       features: ["Custom conversion tracking", "Enhanced analytics", "Conversion attribution"]
     },
     {
       icon: <PieChart className="h-5 w-5" />,
-      title: "Edinburgh Multi-variant Testing",
+      title: "Multi-variant Testing",
       description: "Sophisticated testing frameworks to optimize multiple variables simultaneously.",
       features: ["Statistical analysis", "Segment testing", "Long-term testing programs"]
     },
     {
       icon: <CheckCircle className="h-5 w-5" />,
-      title: "Edinburgh CRO Audit & Strategy",
+      title: "CRO Audit & Strategy",
       description: "Comprehensive review of your Edinburgh business's digital conversion strategy.",
       features: ["Competitor analysis", "Implementation roadmap", "Conversion opportunity sizing"]
     }

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -31,7 +30,7 @@ const Edinburgh = () => {
     result: "164% increase in trial signups",
     description: "We redesigned their landing page and optimized the signup flow, resulting in a significant boost in conversion rates."
   }, {
-    title: "Edinburgh Retail Chain",
+    title: "Retail Chain",
     industry: "E-commerce",
     result: "43% higher average order value",
     description: "Our checkout optimization and product page improvements led to customers adding more items to their carts."
@@ -51,7 +50,6 @@ const Edinburgh = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow">
-        {/* Hero Section */}
         <section className="relative min-h-[80vh] flex items-center pt-20 pb-16 overflow-hidden">
           <div className="absolute inset-0 overflow-hidden -z-10">
             <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/80 to-background"></div>
@@ -90,22 +88,16 @@ const Edinburgh = () => {
           </div>
         </section>
 
-        {/* About Us Section */}
         <EdinburghAbout />
 
-        {/* Services Section */}
         <EdinburghServices />
 
-        {/* Testimonials Section */}
         <EdinburghTestimonials />
 
-        {/* Process Section */}
         <EdinburghProcess />
 
-        {/* Tech Stack Section - Now using the shared Tools component */}
         <Tools />
         
-        {/* Edinburgh Case Studies */}
         <section className="py-16 relative overflow-hidden bg-white">
           <div className="container px-6 mx-auto">
             <div className="text-center max-w-2xl mx-auto mb-12">
@@ -149,10 +141,8 @@ const Edinburgh = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
         <EdinburghCTA />
 
-        {/* Edinburgh Clients */}
         <EdinburghClients />
       </main>
       <Footer />
