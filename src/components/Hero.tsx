@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, LineChart, BarChart, TrendingUp, ArrowUpRight } from 'lucide-react';
@@ -32,7 +33,7 @@ const Hero = () => {
               titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-secondary border border-border">
+            <span className="inline-block px-4 py-1.5 mb-3 text-sm font-medium rounded-full bg-secondary border border-border">
               Conversion Rate Optimization Agency
             </span>
             <h1 className="heading-xl mb-6">
