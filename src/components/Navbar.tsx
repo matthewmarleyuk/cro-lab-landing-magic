@@ -40,8 +40,8 @@ const Navbar = () => {
           className="flex items-center space-x-2"
         >
           <img 
-            src="/lovable-uploads/cro-favicon.png" 
-            alt="CRO Lab Logo" 
+            src="/lovable-uploads/0d5fa8dc-4fca-47f2-89cc-8d9791774f03.png" 
+            alt="CRO Lab Flask Logo" 
             className="h-8 w-8" 
           />
           <span className="text-xl font-bold tracking-tight">
@@ -80,8 +80,8 @@ const Navbar = () => {
             <div className="flex items-center justify-between border-b pb-4">
               <div className="flex items-center space-x-2">
                 <img 
-                  src="/lovable-uploads/cro-favicon.png" 
-                  alt="CRO Lab Logo" 
+                  src="/lovable-uploads/0d5fa8dc-4fca-47f2-89cc-8d9791774f03.png" 
+                  alt="CRO Lab Flask Logo" 
                   className="h-8 w-8" 
                 />
                 <span className="text-lg font-bold">
