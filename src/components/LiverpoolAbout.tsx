@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Container } from '@/components/ui/sidebar';
+import { Container } from '@/components/ui/container';
 
 const LiverpoolAbout = () => {
   return (

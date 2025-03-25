@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Container } from '@/components/ui/sidebar';
+import { Container } from '@/components/ui/container';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 

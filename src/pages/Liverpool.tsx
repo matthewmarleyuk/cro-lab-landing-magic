@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Navbar } from '@/components/Navbar';
+import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import LiverpoolServices from '@/components/LiverpoolServices';
 import LiverpoolAbout from '@/components/LiverpoolAbout';
