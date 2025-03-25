@@ -1,0 +1,124 @@
+
+import React from 'react';
+import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
+import { ArrowUpRight } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const Results = () => {
+  const { ref: titleRef, isVisible: titleVisible } = useFadeIn(0.1);
+  
+  const caseStudies = [
+    {
+      industry: 'E-commerce',
+      title: 'How we increased cart conversions by 37%',
+      metrics: [
+        { label: 'Conversion Rate', value: '+37%' },
+        { label: 'Revenue Lift', value: '$243K' },
+      ],
+      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+    },
+    {
+      industry: 'SaaS',
+      title: 'Optimizing sign-up flow for 49% more trials',
+      metrics: [
+        { label: 'Trial Sign-ups', value: '+49%' },
+        { label: 'Customer Acquisition Cost', value: '-23%' },
+      ],
+      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+    },
+    {
+      industry: 'Financial Services',
+      title: 'Lead form redesign delivers 64% conversion lift',
+      metrics: [
+        { label: 'Form Completion', value: '+64%' },
+        { label: 'Lead Quality', value: '+27%' },
+      ],
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+    },
+  ];
+  
+  const { containerRef: casesRef, visibleItems: casesVisible } = useStaggeredAnimation(caseStudies, 150);
+
+  return (
+    <section id="results" className="py-24 md:py-32 relative">
+      <div className="container px-6 mx-auto">
+        <div 
+          ref={titleRef} 
+          className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 delay-200 transform ${
+            titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+          }`}
+        >
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-secondary border border-border">
+            Results
+          </span>
+          <h2 className="heading-lg mb-6">
+            Real-world conversion improvements our clients have achieved
+          </h2>
+          <p className="body-md text-muted-foreground">
+            We've helped businesses across various industries optimize their websites and dramatically increase their conversion rates.
+          </p>
+        </div>
+        
+        <div
+          ref={casesRef}
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+        >
+          {caseStudies.map((study, index) => (
+            <div 
+              key={study.title}
+              className={`glass-card rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${
+                casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+              }`}
+              style={{ transitionDelay: `${300 + index * 150}ms` }}
+            >
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={study.image} 
+                  alt={study.title} 
+                  className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute bottom-4 left-4">
+                  <span className="px-3 py-1 text-xs font-medium bg-white/20 backdrop-blur-sm rounded-full text-white">
+                    {study.industry}
+                  </span>
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-lg font-semibold mb-4">{study.title}</h3>
+                
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  {study.metrics.map((metric) => (
+                    <div key={metric.label} className="bg-secondary rounded-lg p-3">
+                      <div className="text-2xl font-bold mb-1">{metric.value}</div>
+                      <div className="text-xs text-muted-foreground">{metric.label}</div>
+                    </div>
+                  ))}
+                </div>
+                
+                <Button variant="ghost" className="p-0 h-auto font-medium" size="sm">
+                  View case study
+                  <ArrowUpRight className="ml-1 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <Button size="lg" className="rounded-full">
+            View All Case Studies
+            <ArrowUpRight className="ml-1 h-5 w-5" />
+          </Button>
+        </div>
+      </div>
+      
+      {/* Background elements */}
+      <div className="absolute top-1/4 right-0 w-72 h-72 rounded-full bg-cro-300/10 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 left-0 w-72 h-72 rounded-full bg-cro-200/10 filter blur-3xl -z-10"></div>
+    </section>
+  );
+};
+
+export default Results;
