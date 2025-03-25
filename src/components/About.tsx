@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Beaker, LineChart, SearchCheck, CircleDollarSign } from 'lucide-react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
@@ -32,7 +33,7 @@ const About = () => {
   const { containerRef: featuresRef, visibleItems: featuresVisible } = useStaggeredAnimation(features, 150);
 
   return (
-    <section id="about" className="py-10 md:py-14 relative overflow-hidden">
+    <section id="about" className="py-6 md:py-8 relative overflow-hidden">
       <div className="container px-6 mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
