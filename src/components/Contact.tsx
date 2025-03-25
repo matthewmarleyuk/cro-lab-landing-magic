@@ -4,6 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+
 const Contact = () => {
   const {
     ref: titleRef,
@@ -17,7 +18,9 @@ const Contact = () => {
     ref: infoRef,
     isVisible: infoVisible
   } = useFadeIn(0.1);
+
   const benefits = ['Free conversion audit for new clients', 'No long-term contracts - we earn your business monthly', 'Results-based performance guarantees', 'Direct communication with optimization experts'];
+
   return <section id="contact" className="py-16 md:py-20 bg-secondary/50 relative">
       <div className="container px-6 mx-auto">
         <div ref={titleRef} className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 delay-200 transform ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -80,17 +83,17 @@ const Contact = () => {
           </div>
           
           <div ref={infoRef} className={`md:col-span-2 transition-all duration-700 delay-600 transform ${infoVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
-            <div className="glass-card rounded-xl p-6 md:p-8 mb-6">
+            <div className="rounded-xl p-6 md:p-8 mb-6 bg-primary text-primary-foreground">
               <h3 className="text-xl font-semibold mb-6">Why work with us</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => <li key={index} className="flex">
-                    <CheckCircle className="h-5 w-5 text-cro-700 mr-3 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
                     <span className="text-sm">{benefit}</span>
                   </li>)}
               </ul>
             </div>
             
-            <div className="glass-card rounded-xl p-6 md:p-8">
+            <div className="rounded-xl p-6 md:p-8">
               <h3 className="text-xl font-semibold mb-6">Contact information</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
@@ -133,4 +136,5 @@ const Contact = () => {
       <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-cro-400/5 filter blur-3xl -z-10"></div>
     </section>;
 };
+
 export default Contact;
