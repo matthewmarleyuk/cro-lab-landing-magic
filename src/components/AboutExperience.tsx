@@ -73,7 +73,7 @@ const AboutExperience = () => {
             }`}
           >
             <div className="relative">
-              <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl z-0 bg-palette-navy"></div>
+              <div className="absolute -top-4 -left-4 w-full h-full rounded-2xl z-0 bg-palette-magenta"></div>
               <img 
                 src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81" 
                 alt="CRO team analyzing data" 
