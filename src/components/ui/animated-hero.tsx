@@ -1,17 +1,11 @@
-
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, ChevronRight, TrendingUp, DollarSign, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AvatarGroup } from "@/components/ui/avatar-group";
-
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
-  const titles = useMemo(
-    () => ["Conversions", "Sales", "Revenue", "Growth", "Results"],
-    []
-  );
-
+  const titles = useMemo(() => ["Conversions", "Sales", "Revenue", "Growth", "Results"], []);
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (titleNumber === titles.length - 1) {
@@ -22,9 +16,7 @@ function Hero() {
     }, 2000);
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
-
-  return (
-    <div className="w-full relative min-h-screen flex items-center pt-6 pb-2 overflow-hidden">
+  return <div className="w-full relative min-h-screen flex items-center pt-6 pb-2 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/80 to-background"></div>
         <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl"></div>
@@ -43,27 +35,21 @@ function Hero() {
               <span className="text-palette-navy">Transform Your</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
-                {titles.map((title, index) => (
-                  <motion.span
-                    key={index}
-                    className="absolute font-semibold shimmer-text"
-                    initial={{ opacity: 0, y: "-100" }}
-                    transition={{ type: "spring", stiffness: 50 }}
-                    animate={
-                      titleNumber === index
-                        ? {
-                            y: 0,
-                            opacity: 1,
-                          }
-                        : {
-                            y: titleNumber > index ? -150 : 150,
-                            opacity: 0,
-                          }
-                    }
-                  >
+                {titles.map((title, index) => <motion.span key={index} className="absolute font-semibold shimmer-text" initial={{
+                opacity: 0,
+                y: "-100"
+              }} transition={{
+                type: "spring",
+                stiffness: 50
+              }} animate={titleNumber === index ? {
+                y: 0,
+                opacity: 1
+              } : {
+                y: titleNumber > index ? -150 : 150,
+                opacity: 0
+              }}>
                     {title}
-                  </motion.span>
-                ))}
+                  </motion.span>)}
               </span>
             </h1>
 
@@ -88,24 +74,30 @@ function Hero() {
           
           {/* Stats section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
-            {[
-              { value: '147%', label: 'Avg. Conversion Lift', icon: <TrendingUp className="h-5 w-5" /> },
-              { value: '23.4%', label: 'Revenue Increase', icon: <DollarSign className="h-5 w-5" /> },
-              { value: '79%', label: 'Higher ROI', icon: <BarChart className="h-5 w-5" /> },
-            ].map((stat) => (
-              <div key={stat.label} className="glass-card rounded-xl p-6 flex flex-col items-center" style={{ backgroundColor: "#270A56" }}>
-                <div className="rounded-full bg-white/20 backdrop-blur-sm p-2 mb-3">
+            {[{
+            value: '147%',
+            label: 'Avg. Conversion Lift',
+            icon: <TrendingUp className="h-5 w-5" />
+          }, {
+            value: '23.4%',
+            label: 'Revenue Increase',
+            icon: <DollarSign className="h-5 w-5" />
+          }, {
+            value: '79%',
+            label: 'Higher ROI',
+            icon: <BarChart className="h-5 w-5" />
+          }].map(stat => <div key={stat.label} className="glass-card rounded-xl p-6 flex flex-col items-center" style={{
+            backgroundColor: "#270A56"
+          }}>
+                <div className="rounded-full backdrop-blur-sm p-2 mb-3 bg-slate-50">
                   {stat.icon}
                 </div>
                 <div className="text-3xl font-bold mb-1 text-white">{stat.value}</div>
                 <div className="text-sm text-white/80">{stat.label}</div>
-              </div>
-            ))}
+              </div>)}
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
-
 export { Hero };
