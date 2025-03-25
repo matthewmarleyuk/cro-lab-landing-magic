@@ -82,29 +82,19 @@ const Footer = () => {
             <h4 className="font-semibold text-base mb-4">Company</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  Case Studies
-                </a>
+                <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                  Services
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  Careers
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
