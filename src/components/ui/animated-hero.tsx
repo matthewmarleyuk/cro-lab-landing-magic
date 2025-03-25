@@ -26,7 +26,7 @@ function Hero() {
       <div className="container mx-auto">
         <div className="flex gap-8 py-20 items-center justify-center flex-col">
           <div>
-            <span className="inline-block px-4 py-1.5 mb-3 text-sm font-medium rounded-full bg-palette-purple border border-palette-purple text-[#270a56]">
+            <span className="inline-block px-4 py-1.5 mb-3 text-sm font-medium rounded-full bg-[#270A56] border border-[#270A56] text-white">
               Conversion Rate Optimization Agency
             </span>
           </div>
@@ -72,7 +72,6 @@ function Hero() {
             <AvatarGroup />
           </div>
           
-          {/* Stats section */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto">
             {[{
             value: '147%',
