@@ -18,8 +18,8 @@ const Services = () => {
         <ServicesShowcase />
         <Testimonials />
         <Process />
-        <ServicesFAQ />
         <ServicesCTA />
+        <ServicesFAQ />
       </main>
       <Footer />
     </div>
