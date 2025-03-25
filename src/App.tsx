@@ -11,6 +11,7 @@ import Birmingham from '@/pages/Birmingham';
 import London from '@/pages/London';
 import Contact from '@/pages/Contact';
 import Services from '@/pages/Services';
+import AboutUs from '@/pages/AboutUs';
 import './App.css';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/london" element={<London />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/about" element={<AboutUs />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

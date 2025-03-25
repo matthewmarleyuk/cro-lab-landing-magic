@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 import { ChevronRight, Menu, X } from 'lucide-react';
@@ -22,7 +21,7 @@ const Navbar = () => {
   }, [scrolled]);
 
   const navLinks = [
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Results', href: '#results' },
     { name: 'Contact', href: '/contact' },
