@@ -31,7 +31,7 @@ function Hero() {
             </span>
           </div>
           <div className="flex gap-4 flex-col">
-            <h1 className="md:text-7xl max-w-2xl tracking-tighter text-center font-bold text-4xl">
+            <h1 className="md:text-7xl max-w-2xl tracking-tighter text-center font-bold text-5xl">
               <span className="text-palette-navy">Transform Your</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
@@ -53,7 +53,7 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center">
+            <p className="md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center text-base">
               We use data-driven strategies and scientific testing to optimize your website's conversion rate, helping you generate more leads, sales, and revenue without increasing traffic.
             </p>
           </div>
