@@ -8,6 +8,7 @@ import Glasgow from '@/pages/Glasgow';
 import Liverpool from '@/pages/Liverpool';
 import Manchester from '@/pages/Manchester';
 import Birmingham from '@/pages/Birmingham';
+import London from '@/pages/London';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/liverpool" element={<Liverpool />} />
       <Route path="/manchester" element={<Manchester />} />
       <Route path="/birmingham" element={<Birmingham />} />
+      <Route path="/london" element={<London />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
