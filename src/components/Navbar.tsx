@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { ChevronRight, Menu, X } from 'lucide-react';
+import { ChevronRight, Menu, X, Beaker } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
@@ -39,7 +39,11 @@ const Navbar = () => {
           href="#" 
           className="flex items-center space-x-2"
         >
-          <span className="text-xl font-bold tracking-tight text-palette-navy">The CRO Lab</span>
+          <Beaker className="h-5 w-5 text-palette-navy" />
+          <span className="text-xl font-bold tracking-tight">
+            <span className="shimmer-text">CRO</span> 
+            <span className="text-palette-navy">Lab</span>
+          </span>
         </a>
         
         {/* Desktop navigation */}
@@ -69,7 +73,13 @@ const Navbar = () => {
           </SheetTrigger>
           <SheetContent className="flex flex-col bg-palette-cream">
             <div className="flex items-center justify-between border-b pb-4">
-              <span className="text-lg font-bold text-palette-navy">The CRO Lab</span>
+              <div className="flex items-center space-x-2">
+                <Beaker className="h-5 w-5 text-palette-navy" />
+                <span className="text-lg font-bold">
+                  <span className="shimmer-text">CRO</span> 
+                  <span className="text-palette-navy">Lab</span>
+                </span>
+              </div>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <X className="h-5 w-5" />
