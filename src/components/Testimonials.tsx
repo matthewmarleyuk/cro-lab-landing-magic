@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { Star } from 'lucide-react';
@@ -36,7 +35,7 @@ const Testimonials = () => {
           <h2 className="heading-lg mb-6 text-balance">
             What our clients say about our CRO expertise
           </h2>
-          <p className="body-md text-muted-foreground px-[57px] text-balance">
+          <p className="body-md text-muted-foreground text-balance px-0">
             See how we've helped businesses like yours overcome conversion challenges and achieve significant growth.
           </p>
         </div>

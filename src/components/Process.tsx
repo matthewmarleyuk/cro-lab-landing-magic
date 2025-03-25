@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 const Process = () => {
@@ -36,7 +35,7 @@ const Process = () => {
           <h2 className="heading-lg mb-6 text-balance">
             How we optimize your conversion rates
           </h2>
-          <p className="body-md text-muted-foreground px-[75px] text-balance">
+          <p className="body-md text-muted-foreground text-balance px-0">
             Our proven methodology combines data analysis, experimentation, and implementation to drive meaningful results.
           </p>
         </div>
