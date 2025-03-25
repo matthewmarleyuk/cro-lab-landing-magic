@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, LineChart, BarChart, TrendingUp, ArrowUpRight } from 'lucide-react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
+import { AvatarGroup } from '@/components/ui/avatar-group';
 
 const Hero = () => {
   const { ref: titleRef, isVisible: titleVisible } = useFadeIn(0.1);
@@ -65,6 +66,9 @@ const Hero = () => {
               See Our Services
               <ArrowUpRight className="ml-1 h-5 w-5" />
             </Button>
+            <div className="w-full flex justify-center mt-6">
+              <AvatarGroup />
+            </div>
           </div>
           
           <div 

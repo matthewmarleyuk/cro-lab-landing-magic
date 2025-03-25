@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AvatarGroup } from "@/components/ui/avatar-group";
 
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -79,6 +80,10 @@ function Hero() {
               See Our Services
               <MoveRight className="ml-1 h-5 w-5" />
             </Button>
+          </div>
+          
+          <div className="mt-4">
+            <AvatarGroup />
           </div>
           
           {/* Stats section */}
