@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -87,7 +88,7 @@ const Contact = () => {
               <h3 className="text-xl font-semibold mb-6">Why work with us</h3>
               <ul className="space-y-4">
                 {benefits.map((benefit, index) => <li key={index} className="flex">
-                    <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-white mr-3 flex-shrink-0" />
                     <span className="text-sm">{benefit}</span>
                   </li>)}
               </ul>
