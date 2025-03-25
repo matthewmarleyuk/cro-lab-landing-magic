@@ -73,16 +73,16 @@ const About = () => {
             {features.map((feature, index) => (
               <div 
                 key={feature.title}
-                className={`rounded-xl p-6 transition-all duration-500 transform bg-primary/5 backdrop-blur-md border border-primary/10 shadow-md hover:shadow-lg hover:-translate-y-1 ${
+                className={`rounded-xl p-6 transition-all duration-500 transform bg-palette-dark text-white border border-palette-dark/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                   featuresVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
               >
-                <div className="rounded-full bg-primary/10 p-2 inline-flex mb-4">
+                <div className="rounded-full bg-primary/20 p-2 inline-flex mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
+                <p className="text-sm text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>

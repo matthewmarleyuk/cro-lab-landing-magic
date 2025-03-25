@@ -62,6 +62,7 @@ export default {
           cream: '#F1E9DA',
           navy: '#2E294E',
           yellow: '#FFD400',
+          dark: '#020122',
         },
         cro: {
           50: '#f5f5f6',
