@@ -31,7 +31,7 @@ const Navbar = () => {
     <header 
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        scrolled ? 'bg-white/80 backdrop-blur-lg shadow-sm py-3' : 'bg-transparent py-5'
+        scrolled ? 'bg-palette-cream/80 backdrop-blur-lg shadow-sm py-3' : 'bg-transparent py-5'
       )}
     >
       <div className="container flex items-center justify-between">
@@ -39,7 +39,7 @@ const Navbar = () => {
           href="#" 
           className="flex items-center space-x-2"
         >
-          <span className="text-xl font-bold tracking-tight">The CRO Lab</span>
+          <span className="text-xl font-bold tracking-tight text-palette-navy">The CRO Lab</span>
         </a>
         
         {/* Desktop navigation */}
@@ -48,12 +48,12 @@ const Navbar = () => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-smooth"
+              className="text-sm font-medium text-foreground/80 hover:text-palette-purple transition-smooth"
             >
               {link.name}
             </a>
           ))}
-          <Button className="rounded-full">
+          <Button className="rounded-full bg-palette-magenta hover:bg-palette-magenta/90">
             Get Started
             <ChevronRight className="ml-1 h-4 w-4" />
           </Button>
@@ -67,9 +67,9 @@ const Navbar = () => {
               <span className="sr-only">Toggle menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent className="flex flex-col">
+          <SheetContent className="flex flex-col bg-palette-cream">
             <div className="flex items-center justify-between border-b pb-4">
-              <span className="text-lg font-bold">The CRO Lab</span>
+              <span className="text-lg font-bold text-palette-navy">The CRO Lab</span>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="icon">
                   <X className="h-5 w-5" />
@@ -82,12 +82,12 @@ const Navbar = () => {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="text-base font-medium hover:text-primary/80 transition-smooth"
+                  className="text-base font-medium hover:text-palette-purple transition-smooth"
                 >
                   {link.name}
                 </a>
               ))}
-              <Button className="w-full justify-center rounded-full mt-4">
+              <Button className="w-full justify-center rounded-full mt-4 bg-palette-magenta hover:bg-palette-magenta/90">
                 Get Started
                 <ChevronRight className="ml-1 h-4 w-4" />
               </Button>

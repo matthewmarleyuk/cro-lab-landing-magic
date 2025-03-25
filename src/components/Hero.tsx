@@ -21,8 +21,8 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center pt-20">
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/80 to-background"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-primary/5 filter blur-3xl"></div>
-        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-cro-300/10 filter blur-3xl"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl"></div>
+        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-palette-magenta/10 filter blur-3xl"></div>
       </div>
       
       <div className="container px-6 mx-auto">
@@ -58,11 +58,11 @@ const Hero = () => {
               ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
             }`}
           >
-            <Button size="lg" className="rounded-full px-6 py-6 text-base">
+            <Button size="lg" className="rounded-full px-6 py-6 text-base bg-palette-magenta hover:bg-palette-magenta/90">
               Get Free Analysis
               <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full px-6 py-6 text-base">
+            <Button variant="outline" size="lg" className="rounded-full px-6 py-6 text-base border-palette-purple text-palette-purple hover:bg-palette-purple/10">
               See Our Services
               <ArrowUpRight className="ml-1 h-5 w-5" />
             </Button>
@@ -80,10 +80,10 @@ const Hero = () => {
                 }`}
                 style={{ transitionDelay: `${700 + index * 100}ms` }}
               >
-                <div className="rounded-full bg-secondary p-2 mb-3">
+                <div className="rounded-full bg-palette-cream p-2 mb-3">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold mb-1">{stat.value}</div>
+                <div className="text-3xl font-bold mb-1 text-palette-purple">{stat.value}</div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
             ))}

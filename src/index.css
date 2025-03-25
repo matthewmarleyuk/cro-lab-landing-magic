@@ -5,44 +5,44 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 240 5% 15%;
+    --background: 43 27% 90%;  /* Based on cream #F1E9DA */
+    --foreground: 252 25% 24%; /* Based on navy #2E294E */
 
     --card: 0 0% 100%;
-    --card-foreground: 240 5% 15%;
+    --card-foreground: 252 25% 24%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 5% 15%;
+    --popover-foreground: 252 25% 24%;
 
-    --primary: 240 5% 15%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 271 59% 31%;    /* Based on purple #541388 */
+    --primary-foreground: 43 27% 90%;
 
-    --secondary: 240 5% 96%;
-    --secondary-foreground: 240 5% 15%;
+    --secondary: 43 27% 90%;   /* Based on cream #F1E9DA */
+    --secondary-foreground: 252 25% 24%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 43 27% 95%;
+    --muted-foreground: 252 25% 40%;
 
-    --accent: 240 5% 96%;
-    --accent-foreground: 240 5% 15%;
+    --accent: 45 100% 50%;     /* Based on yellow #FFD400 */
+    --accent-foreground: 252 25% 24%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: 336 98% 43%; /* Based on magenta #D90368 */
+    --destructive-foreground: 43 27% 90%;
 
-    --border: 240 5% 90%;
-    --input: 240 5% 90%;
-    --ring: 240 5% 70%;
+    --border: 43 27% 85%;
+    --input: 43 27% 85%;
+    --ring: 271 59% 31%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 43 27% 90%;
+    --sidebar-foreground: 252 25% 26.1%;
+    --sidebar-primary: 252 25% 10%;
+    --sidebar-primary-foreground: 43 27% 90%;
+    --sidebar-accent: 252 25% 95.9%;
+    --sidebar-accent-foreground: 252 25% 10%;
+    --sidebar-border: 43 27% 91%;
+    --sidebar-ring: 271 59% 31%;
   }
 
   * {
@@ -97,7 +97,7 @@
   }
   
   .shimmer-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground via-foreground/70 to-foreground bg-[length:200%_auto] animate-text-shimmer;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-palette-purple via-palette-magenta to-palette-purple bg-[length:200%_auto] animate-text-shimmer;
   }
 }
 
