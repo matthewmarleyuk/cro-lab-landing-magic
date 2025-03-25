@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -127,19 +128,19 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                <Link to="/manchester" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
                   <MapPin className="h-3.5 w-3.5 mr-1.5" /> Manchester
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                <Link to="/birmingham" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
                   <MapPin className="h-3.5 w-3.5 mr-1.5" /> Birmingham
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                <Link to="/london" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
                   <MapPin className="h-3.5 w-3.5 mr-1.5" /> London
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
