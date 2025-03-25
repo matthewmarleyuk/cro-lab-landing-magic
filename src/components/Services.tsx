@@ -12,37 +12,43 @@ const Services = () => {
       icon: <Activity className="h-6 w-6" />,
       title: 'CRO Audit',
       description: 'Comprehensive analysis of your website to identify conversion barriers and opportunities.',
-      items: ['User journey mapping', 'Conversion funnel analysis', 'Opportunity prioritization']
+      items: ['User journey mapping', 'Conversion funnel analysis', 'Opportunity prioritization'],
+      bgColor: '#541388' // Purple - first card
     },
     {
       icon: <Lightbulb className="h-6 w-6" />,
       title: 'A/B Testing',
       description: 'Data-driven experimentation to validate hypotheses and improve conversions.',
-      items: ['Hypothesis development', 'Test implementation', 'Results analysis & reporting']
+      items: ['Hypothesis development', 'Test implementation', 'Results analysis & reporting'],
+      bgColor: '#D90368' // Pink - second card
     },
     {
       icon: <Beaker className="h-6 w-6" />,
       title: 'UX Research',
       description: 'In-depth user research to understand behaviors, motivations and pain points.',
-      items: ['User interviews', 'Usability testing', 'Heatmap & session recording']
+      items: ['User interviews', 'Usability testing', 'Heatmap & session recording'],
+      bgColor: '#541388' // Purple - third card
     },
     {
       icon: <PanelRight className="h-6 w-6" />,
       title: 'Landing Page Optimization',
       description: 'Targeted improvements for your highest-value pages to maximize conversions.',
-      items: ['Value proposition clarity', 'Persuasive content creation', 'Form optimization']
+      items: ['Value proposition clarity', 'Persuasive content creation', 'Form optimization'],
+      bgColor: '#D90368' // Pink - fourth card
     },
     {
       icon: <MousePointer className="h-6 w-6" />,
       title: 'Website Personalization',
       description: 'Tailored user experiences based on visitor segments and behaviors.',
-      items: ['Audience segmentation', 'Dynamic content', 'Behavioral targeting']
+      items: ['Audience segmentation', 'Dynamic content', 'Behavioral targeting'],
+      bgColor: '#541388' // Purple - fifth card
     },
     {
       icon: <Target className="h-6 w-6" />,
       title: 'Conversion Analytics',
       description: 'Advanced tracking and analysis to measure performance and inform strategy.',
-      items: ['KPI development', 'Custom dashboard creation', 'Regular performance reviews']
+      items: ['KPI development', 'Custom dashboard creation', 'Regular performance reviews'],
+      bgColor: '#D90368' // Pink - sixth card
     }
   ];
   
@@ -75,13 +81,16 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className={`rounded-xl p-6 transition-all duration-500 transform bg-palette-purple text-white border border-palette-purple/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
+              className={`rounded-xl p-6 transition-all duration-500 transform text-white border border-white/10 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                 servicesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
-              style={{ transitionDelay: `${300 + index * 100}ms` }}
+              style={{ 
+                transitionDelay: `${300 + index * 100}ms`,
+                backgroundColor: service.bgColor
+              }}
             >
               <div className="rounded-full bg-white p-3 inline-flex mb-5">
-                {React.cloneElement(service.icon, { className: "h-6 w-6 text-palette-purple" })}
+                {React.cloneElement(service.icon, { className: "h-6 w-6", style: { color: service.bgColor } })}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
               <p className="text-sm text-white/90 mb-4">{service.description}</p>
