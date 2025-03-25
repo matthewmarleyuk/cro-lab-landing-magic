@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { LineChart, Activity, Eye } from 'lucide-react';
@@ -56,7 +55,7 @@ const Tools = () => {
                 </div>
                 <div className="p-6 text-white">
                   <h3 className="text-xl font-semibold mb-2">{tool.name}</h3>
-                  <p className="text-sm text-white/90 text-balance">{tool.description}</p>
+                  <p className="text-sm text-white/90">{tool.description}</p>
                 </div>
               </div>
             </div>)}
