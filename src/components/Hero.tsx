@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, LineChart, BarChart, TrendingUp, ArrowUpRight } from 'lucide-react';
@@ -18,7 +17,7 @@ const Hero = () => {
   const { containerRef: statsRef, visibleItems: statsVisible } = useStaggeredAnimation(statsItems, 200);
 
   return (
-    <section className="relative min-h-screen flex items-center pt-20 pb-12 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-20 pb-4 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/80 to-background"></div>
         <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl"></div>
@@ -70,7 +69,7 @@ const Hero = () => {
           
           <div 
             ref={statsRef}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16 max-w-3xl mx-auto"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-3xl mx-auto"
           >
             {statsItems.map((stat, index) => (
               <div 
