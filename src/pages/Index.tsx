@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
-import Hero from '@/components/Hero';
+import { Hero } from '@/components/ui/animated-hero';
 import About from '@/components/About';
 import Services from '@/components/Services';
 import Testimonials from '@/components/Testimonials';
