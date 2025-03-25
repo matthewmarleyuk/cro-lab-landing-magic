@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
-import { ChevronRight, Menu, X, Beaker } from 'lucide-react';
+import { ChevronRight, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
@@ -39,7 +39,11 @@ const Navbar = () => {
           href="#" 
           className="flex items-center space-x-2"
         >
-          <Beaker className="h-5 w-5 text-palette-navy" />
+          <img 
+            src="/lovable-uploads/a526d801-1e56-48c1-8d5e-4aae2709f5b6.png" 
+            alt="Lab beaker" 
+            className="h-5 w-5 text-palette-navy" 
+          />
           <span className="text-xl font-bold tracking-tight">
             <span className="text-palette-navy">The </span>
             <span className="shimmer-text">CRO</span>
@@ -75,7 +79,11 @@ const Navbar = () => {
           <SheetContent className="flex flex-col bg-palette-cream">
             <div className="flex items-center justify-between border-b pb-4">
               <div className="flex items-center space-x-2">
-                <Beaker className="h-5 w-5 text-palette-navy" />
+                <img 
+                  src="/lovable-uploads/a526d801-1e56-48c1-8d5e-4aae2709f5b6.png" 
+                  alt="Lab beaker" 
+                  className="h-5 w-5 text-palette-navy" 
+                />
                 <span className="text-lg font-bold">
                   <span className="text-palette-navy">The </span>
                   <span className="shimmer-text">CRO</span>
