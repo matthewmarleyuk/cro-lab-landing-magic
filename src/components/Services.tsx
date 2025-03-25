@@ -75,26 +75,26 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={service.title}
-              className={`rounded-xl p-6 transition-all duration-500 transform bg-accent/10 backdrop-blur-md border border-accent/20 shadow-md hover:shadow-lg hover:-translate-y-1 ${
+              className={`rounded-xl p-6 transition-all duration-500 transform bg-palette-magenta text-white border border-palette-magenta/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                 servicesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-accent/20 p-3 inline-flex mb-5">
+              <div className="rounded-full bg-white/20 p-3 inline-flex mb-5">
                 {service.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-sm text-muted-foreground mb-4">{service.description}</p>
+              <p className="text-sm text-white/90 mb-4">{service.description}</p>
               <ul className="space-y-2">
                 {service.items.map((item, i) => (
                   <li key={i} className="flex items-center text-sm">
-                    <div className="h-1.5 w-1.5 rounded-full bg-primary mr-2"></div>
+                    <div className="h-1.5 w-1.5 rounded-full bg-white mr-2"></div>
                     {item}
                   </li>
                 ))}
               </ul>
-              <div className="mt-6 pt-4 border-t border-accent/30">
-                <Button variant="ghost" className="p-0 h-auto font-medium" size="sm">
+              <div className="mt-6 pt-4 border-t border-white/30">
+                <Button variant="ghost" className="p-0 h-auto font-medium text-white hover:bg-white/10 hover:text-white" size="sm">
                   Learn more
                   <MoveRight className="ml-1 h-4 w-4" />
                 </Button>
