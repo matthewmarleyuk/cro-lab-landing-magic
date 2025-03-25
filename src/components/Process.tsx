@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 const Process = () => {
@@ -61,10 +60,8 @@ const Process = () => {
       </div>
       
       {/* Background elements */}
-      <div className="absolute top-1/3 right-0 w-80 h-80 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/3 left-0 w-80 h-80 rounded-full bg-accent/20 filter blur-3xl -z-10"></div>
-      <div className="absolute top-20 left-1/4 w-64 h-64 rounded-full bg-palette-magenta/15 filter blur-3xl -z-10"></div>
-      <div className="absolute bottom-40 right-1/4 w-72 h-72 rounded-full bg-palette-yellow/15 filter blur-3xl -z-10"></div>
+      <div className="absolute top-1/3 right-0 w-80 h-80 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/3 left-0 w-80 h-80 rounded-full bg-accent/10 filter blur-3xl -z-10"></div>
     </section>;
 };
 export default Process;
