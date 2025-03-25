@@ -118,9 +118,9 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                <Link to="/glasgow" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
                   <MapPin className="h-3.5 w-3.5 mr-1.5" /> Glasgow
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
