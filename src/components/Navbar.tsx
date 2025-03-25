@@ -42,8 +42,8 @@ const Navbar = () => {
           <Beaker className="h-5 w-5 text-palette-navy" />
           <span className="text-xl font-bold tracking-tight">
             <span className="text-palette-navy">The </span>
-            <span className="shimmer-text">CRO</span> 
-            <span className="text-palette-navy">Lab</span>
+            <span className="shimmer-text">CRO</span>
+            <span className="text-palette-navy"> Lab</span>
           </span>
         </a>
         
@@ -78,8 +78,8 @@ const Navbar = () => {
                 <Beaker className="h-5 w-5 text-palette-navy" />
                 <span className="text-lg font-bold">
                   <span className="text-palette-navy">The </span>
-                  <span className="shimmer-text">CRO</span> 
-                  <span className="text-palette-navy">Lab</span>
+                  <span className="shimmer-text">CRO</span>
+                  <span className="text-palette-navy"> Lab</span>
                 </span>
               </div>
               <SheetTrigger asChild>
