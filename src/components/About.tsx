@@ -12,21 +12,25 @@ const About = () => {
       icon: <Beaker className="h-5 w-5" />,
       title: 'Scientific Approach',
       description: 'We use a hypothesis-driven methodology and statistical significance to deliver reliable results.',
+      bgColor: '#D90368' // Pink (magenta from the palette)
     },
     {
       icon: <LineChart className="h-5 w-5" />,
       title: 'Data-Driven Decisions',
       description: 'Every optimization is backed by comprehensive analytics and user behavior insights.',
+      bgColor: '#541388' // Purple from the palette
     },
     {
       icon: <SearchCheck className="h-5 w-5" />,
       title: 'Continuous Testing',
       description: 'Our iterative testing process ensures your website constantly improves over time.',
+      bgColor: '#D90368' // Pink (magenta from the palette)
     },
     {
       icon: <CircleDollarSign className="h-5 w-5" />,
       title: 'ROI Focused',
       description: 'We prioritize changes that directly impact your bottom line and business goals.',
+      bgColor: '#541388' // Purple from the palette
     },
   ];
   
@@ -73,13 +77,16 @@ const About = () => {
             {features.map((feature, index) => (
               <div 
                 key={feature.title}
-                className={`rounded-xl p-6 transition-all duration-500 transform bg-palette-purple text-white border border-palette-purple/30 shadow-md hover:shadow-lg hover:-translate-y-1 ${
+                className={`rounded-xl p-6 transition-all duration-500 transform text-white border border-white/10 shadow-md hover:shadow-lg hover:-translate-y-1 ${
                   featuresVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
                 }`}
-                style={{ transitionDelay: `${400 + index * 100}ms` }}
+                style={{ 
+                  transitionDelay: `${400 + index * 100}ms`,
+                  backgroundColor: feature.bgColor
+                }}
               >
                 <div className="rounded-full bg-white p-2 inline-flex mb-4">
-                  {React.cloneElement(feature.icon, { className: "h-5 w-5 text-palette-purple" })}
+                  {React.cloneElement(feature.icon, { className: "h-5 w-5", style: { color: feature.bgColor } })}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
                 <p className="text-sm text-white/90">{feature.description}</p>
