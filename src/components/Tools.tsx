@@ -68,7 +68,7 @@ const Tools = () => {
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-palette-cream p-4 inline-flex mb-5">
+              <div className="rounded-full bg-palette-teal p-4 inline-flex mb-5">
                 {tool.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2 text-palette-navy">{tool.name}</h3>

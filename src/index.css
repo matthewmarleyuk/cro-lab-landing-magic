@@ -17,10 +17,10 @@
     --primary: 271 59% 31%;    /* Based on purple #541388 */
     --primary-foreground: 43 27% 90%;
 
-    --secondary: 43 27% 90%;   /* Based on cream #F1E9DA */
+    --secondary: 168 65% 91%;   /* Based on teal #D1F2EB - Updated from cream */
     --secondary-foreground: 252 25% 24%;
 
-    --muted: 43 27% 95%;
+    --muted: 168 65% 95%;       /* Updated to match new teal */
     --muted-foreground: 252 25% 40%;
 
     --accent: 45 100% 50%;     /* Based on yellow #FFD400 */
@@ -29,19 +29,19 @@
     --destructive: 336 98% 43%; /* Based on magenta #D90368 */
     --destructive-foreground: 43 27% 90%;
 
-    --border: 43 27% 85%;
-    --input: 43 27% 85%;
+    --border: 168 65% 85%;      /* Updated to match new teal */
+    --input: 168 65% 85%;       /* Updated to match new teal */
     --ring: 271 59% 31%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 43 27% 90%;
+    --sidebar-background: 168 65% 91%;  /* Updated from cream to teal */
     --sidebar-foreground: 252 25% 26.1%;
     --sidebar-primary: 252 25% 10%;
-    --sidebar-primary-foreground: 43 27% 90%;
+    --sidebar-primary-foreground: 168 65% 91%;  /* Updated */
     --sidebar-accent: 252 25% 95.9%;
     --sidebar-accent-foreground: 252 25% 10%;
-    --sidebar-border: 43 27% 91%;
+    --sidebar-border: 168 65% 91%;  /* Updated */
     --sidebar-ring: 271 59% 31%;
   }
 

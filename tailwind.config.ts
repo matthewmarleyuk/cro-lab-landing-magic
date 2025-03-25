@@ -59,7 +59,7 @@ export default {
         palette: {
           purple: '#541388',
           magenta: '#D90368',
-          cream: '#F1E9DA',
+          teal: '#D1F2EB',
           navy: '#2E294E',
           yellow: '#FFD400',
           dark: '#020122',
