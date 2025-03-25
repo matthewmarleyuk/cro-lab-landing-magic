@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { ArrowUpRight } from 'lucide-react';
@@ -18,7 +19,8 @@ const Results = () => {
       label: 'Revenue Lift',
       value: '$243K'
     }],
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d'
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+    bgColor: '#270A56' // Deep purple
   }, {
     industry: 'SaaS',
     title: 'Optimizing sign-up flow for 49% more trials',
@@ -29,7 +31,8 @@ const Results = () => {
       label: 'Customer Acquisition Cost',
       value: '-23%'
     }],
-    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6'
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+    bgColor: '#541388' // Original palette purple
   }, {
     industry: 'Financial Services',
     title: 'Lead form redesign delivers 64% conversion lift',
@@ -40,7 +43,8 @@ const Results = () => {
       label: 'Lead Quality',
       value: '+27%'
     }],
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085'
+    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+    bgColor: '#3B0E5F' // Another shade of purple
   }];
   const {
     containerRef: casesRef,
@@ -61,9 +65,14 @@ const Results = () => {
         </div>
         
         <div ref={casesRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {caseStudies.map((study, index) => <div key={study.title} className={`bg-[#270A56] text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} style={{
-          transitionDelay: `${300 + index * 150}ms`
-        }}>
+          {caseStudies.map((study, index) => <div 
+              key={study.title} 
+              className={`text-white rounded-xl overflow-hidden transition-all duration-500 transform hover:shadow-lg hover:-translate-y-1 ${casesVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} 
+              style={{
+                transitionDelay: `${300 + index * 150}ms`,
+                backgroundColor: study.bgColor
+              }}
+            >
               <div className="relative h-48 overflow-hidden">
                 <img src={study.image} alt={study.title} className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
