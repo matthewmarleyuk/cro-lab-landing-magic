@@ -1,80 +1,82 @@
 
 import React from 'react';
-import { Container } from '@/components/ui/container';
-import { Separator } from '@/components/ui/separator';
+import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
+import { Star } from 'lucide-react';
 
 const LiverpoolTestimonials = () => {
+  const {
+    ref: titleRef,
+    isVisible: titleVisible
+  } = useFadeIn(0.1);
+  
+  const testimonials = [{
+    name: "Thomas Campbell",
+    position: "Marketing Director, LiverpoolTech",
+    content: "The CRO Lab completely transformed our approach to conversion rate optimization. Their data-driven methodology helped us increase conversions by 38% in just two months.",
+    stars: 5
+  }, {
+    name: "Fiona MacLeod",
+    position: "E-commerce Manager, Liverpool Retail",
+    content: "Working with The CRO Lab has been transformative for our business. Their test-driven approach eliminated the guesswork and delivered real, measurable improvements to our funnel.",
+    stars: 5
+  }, {
+    name: "Hamish Ferguson",
+    position: "Digital Director, LiverpoolHealth",
+    content: "We've worked with several CRO agencies in the past, but none have delivered the level of results and insights that The CRO Lab has. Their process is thorough and effective.",
+    stars: 5
+  }];
+  
+  const {
+    containerRef: testimonialsRef,
+    visibleItems: testimonialsVisible
+  } = useStaggeredAnimation(testimonials, 150);
+  
   return (
-    <section className="py-20">
-      <Container>
-        <div className="max-w-4xl mx-auto mb-16 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-            What Our Liverpool Clients Say
+    <section id="testimonials" className="py-16 md:py-20 relative overflow-hidden">
+      <div className="container px-6 mx-auto">
+        <div ref={titleRef} className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 delay-200 transform ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-palette-magenta text-white border border-palette-magenta">
+            Liverpool Client Success Stories
+          </span>
+          <h2 className="heading-lg mb-6 text-balance">
+            What Liverpool businesses say about our CRO expertise
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Read testimonials from businesses we've helped in Liverpool and the Merseyside area.
+          <p className="body-md text-muted-foreground text-balance px-0">
+            See how we've helped Liverpool businesses overcome conversion challenges and achieve significant growth.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <div ref={testimonialsRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-muted/30 p-6 rounded-lg border border-border">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-lg mr-4">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div>
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}, {testimonial.company}</p>
-                </div>
+            <div 
+              key={testimonial.name} 
+              className={`rounded-xl p-8 transition-all duration-500 transform text-white border shadow-md hover:shadow-lg ${testimonialsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`} 
+              style={{
+                transitionDelay: `${400 + index * 100}ms`,
+                backgroundColor: index % 2 === 0 ? '#270A56' : '#D90368',
+                borderColor: index % 2 === 0 ? 'rgba(39, 10, 86, 0.3)' : 'rgba(217, 3, 104, 0.3)'
+              }}
+            >
+              <div className="flex mb-4">
+                {[...Array(testimonial.stars)].map((_, i) => (
+                  <Star key={i} className="w-5 h-5 text-palette-yellow fill-palette-yellow" />
+                ))}
               </div>
-              <p className="italic mb-4">"{testimonial.quote}"</p>
-              <Separator className="mb-4" />
-              <div className="flex justify-between text-sm text-muted-foreground">
-                <span>{testimonial.result}</span>
-                <span>{testimonial.industry}</span>
+              <p className="text-white mb-6 italic text-balance">"{testimonial.content}"</p>
+              <div className="mt-auto">
+                <h4 className="font-semibold text-white text-balance">{testimonial.name}</h4>
+                <p className="text-sm text-white/90 text-balance">{testimonial.position}</p>
               </div>
             </div>
           ))}
         </div>
-      </Container>
+      </div>
+      
+      {/* Background elements */}
+      <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-palette-yellow/10 filter blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
     </section>
   );
 };
-
-const testimonials = [
-  {
-    name: "Emma Thompson",
-    role: "Marketing Director",
-    company: "Liverpool Fashion Co.",
-    quote: "The CRO Lab team helped us increase our online sales by 47% in just three months. Their understanding of the Liverpool market was invaluable.",
-    result: "+47% conversion rate",
-    industry: "Retail"
-  },
-  {
-    name: "James Wilson",
-    role: "CEO",
-    company: "Mersey Digital Solutions",
-    quote: "Working with The CRO Lab transformed our lead generation process. Their data-driven approach and local expertise made all the difference.",
-    result: "+62% lead generation",
-    industry: "Technology"
-  },
-  {
-    name: "Sarah Roberts",
-    role: "Owner",
-    company: "Liverpool Hospitality Group",
-    quote: "Since implementing The CRO Lab's recommendations, our booking rate has increased dramatically and customer feedback has been overwhelmingly positive.",
-    result: "+38% booking rate",
-    industry: "Hospitality"
-  },
-  {
-    name: "Michael Davies",
-    role: "E-commerce Manager",
-    company: "Liverpool Homeware",
-    quote: "The attention to detail and focus on our specific customer base really set The CRO Lab apart. They understood exactly what our Liverpool customers needed.",
-    result: "+53% average order value",
-    industry: "Home & Garden"
-  }
-];
 
 export default LiverpoolTestimonials;
