@@ -10,6 +10,7 @@ import Manchester from '@/pages/Manchester';
 import Birmingham from '@/pages/Birmingham';
 import London from '@/pages/London';
 import Contact from '@/pages/Contact';
+import Services from '@/pages/Services';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/birmingham" element={<Birmingham />} />
       <Route path="/london" element={<London />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/services" element={<Services />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );
