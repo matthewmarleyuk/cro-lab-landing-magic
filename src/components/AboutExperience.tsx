@@ -89,19 +89,19 @@ const AboutExperience = () => {
             statsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
           }`}
         >
-          <div className="text-center p-8 rounded-xl bg-white shadow-sm border border-gray-100">
-            <h3 className="text-5xl font-bold text-palette-purple mb-2">15+</h3>
-            <p className="text-palette-navy/70">Years of Experience</p>
+          <div className="text-center p-8 rounded-xl bg-palette-navy shadow-md border border-palette-navy/20">
+            <h3 className="text-5xl font-bold text-white mb-2">15+</h3>
+            <p className="text-white/90">Years of Experience</p>
           </div>
           
-          <div className="text-center p-8 rounded-xl bg-white shadow-sm border border-gray-100">
-            <h3 className="text-5xl font-bold text-palette-purple mb-2">500+</h3>
-            <p className="text-palette-navy/70">Satisfied Clients</p>
+          <div className="text-center p-8 rounded-xl bg-palette-navy shadow-md border border-palette-navy/20">
+            <h3 className="text-5xl font-bold text-white mb-2">500+</h3>
+            <p className="text-white/90">Satisfied Clients</p>
           </div>
           
-          <div className="text-center p-8 rounded-xl bg-white shadow-sm border border-gray-100">
-            <h3 className="text-5xl font-bold text-palette-purple mb-2">28%</h3>
-            <p className="text-palette-navy/70">Average Conversion Lift</p>
+          <div className="text-center p-8 rounded-xl bg-palette-navy shadow-md border border-palette-navy/20">
+            <h3 className="text-5xl font-bold text-white mb-2">28%</h3>
+            <p className="text-white/90">Average Conversion Lift</p>
           </div>
         </div>
       </Container>
