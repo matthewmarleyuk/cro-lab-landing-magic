@@ -56,10 +56,10 @@ const Process = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative"
         >
           {/* Connecting lines for desktop */}
-          <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-1 bg-gradient-to-r from-palette-purple/30 via-palette-magenta/30 to-palette-purple/30 -translate-y-1/2 z-0"></div>
+          <div className="hidden lg:block absolute top-1/2 left-[25%] right-[25%] h-0.5 bg-border -translate-y-1/2 z-0"></div>
           
           {/* Connecting lines for tablet */}
-          <div className="hidden md:block lg:hidden absolute left-1/2 top-[25%] bottom-[25%] w-1 bg-gradient-to-b from-palette-purple/30 via-palette-magenta/30 to-palette-purple/30 -translate-x-1/2 z-0"></div>
+          <div className="hidden md:block lg:hidden absolute left-1/2 top-[25%] bottom-[25%] w-0.5 bg-border -translate-x-1/2 z-0"></div>
           
           {steps.map((step, index) => (
             <div 
@@ -75,23 +75,23 @@ const Process = () => {
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
               <p className="text-muted-foreground">{step.description}</p>
               
-              {/* Connector dots visible on all devices */}
-              <div className={`absolute w-4 h-4 rounded-full bg-palette-purple ${
-                index === 0 ? 'hidden' : 'lg:block hidden'
-              } -left-2 top-1/2 -translate-y-1/2`}></div>
+              {/* Connector dots visible on desktop */}
+              {index > 0 && (
+                <div className="absolute w-3 h-3 rounded-full bg-palette-purple lg:block hidden -left-1.5 top-1/2 -translate-y-1/2 border border-white"></div>
+              )}
               
-              <div className={`absolute w-4 h-4 rounded-full bg-palette-purple ${
-                index === steps.length - 1 ? 'hidden' : 'lg:block hidden'
-              } -right-2 top-1/2 -translate-y-1/2`}></div>
+              {index < steps.length - 1 && (
+                <div className="absolute w-3 h-3 rounded-full bg-palette-purple lg:block hidden -right-1.5 top-1/2 -translate-y-1/2 border border-white"></div>
+              )}
               
               {/* Vertical connectors for tablet */}
-              <div className={`absolute h-4 w-4 rounded-full bg-palette-purple ${
-                index === 0 ? 'hidden' : 'md:block lg:hidden hidden'
-              } top-0 left-1/2 -translate-y-1/2 -translate-x-1/2`}></div>
+              {index > 0 && (
+                <div className="absolute h-3 w-3 rounded-full bg-palette-purple md:block lg:hidden hidden top-0 left-1/2 -translate-y-1.5 -translate-x-1/2 border border-white"></div>
+              )}
               
-              <div className={`absolute h-4 w-4 rounded-full bg-palette-purple ${
-                index === steps.length - 1 ? 'hidden' : 'md:block lg:hidden hidden'
-              } bottom-0 left-1/2 translate-y-1/2 -translate-x-1/2`}></div>
+              {index < steps.length - 1 && (
+                <div className="absolute h-3 w-3 rounded-full bg-palette-purple md:block lg:hidden hidden bottom-0 left-1/2 translate-y-1.5 -translate-x-1/2 border border-white"></div>
+              )}
             </div>
           ))}
         </div>
