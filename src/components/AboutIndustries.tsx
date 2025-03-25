@@ -74,11 +74,11 @@ const AboutIndustries = () => {
           {industryData.map((industry, index) => (
             <Card 
               key={industry.name}
-              className={`border-none shadow-md hover:shadow-lg transition-all duration-300 ${
+              className={`border-none shadow-md hover:shadow-lg transition-all duration-300 rounded-xl overflow-hidden ${
                 visibleItems[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
             >
-              <CardContent className={`p-8 ${industry.color} text-white`}>
+              <CardContent className={`p-8 ${industry.color} text-white rounded-xl`}>
                 <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
                   {industry.icon}
                 </div>
