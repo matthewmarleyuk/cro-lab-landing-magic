@@ -1,3 +1,4 @@
+
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, ChevronRight, TrendingUp, DollarSign, BarChart } from "lucide-react";
@@ -18,9 +19,9 @@ function Hero() {
   }, [titleNumber, titles]);
   return <div className="w-full relative min-h-screen flex items-center pt-6 pb-2 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden -z-10">
-        <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/80 to-background"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-palette-purple/10 filter blur-3xl"></div>
-        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-palette-magenta/10 filter blur-3xl"></div>
+        <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/40 to-background"></div>
+        <div className="absolute top-40 right-20 w-72 h-72 rounded-full bg-palette-purple/5 filter blur-3xl"></div>
+        <div className="absolute bottom-40 left-20 w-80 h-80 rounded-full bg-palette-magenta/5 filter blur-3xl"></div>
       </div>
       
       <div className="container mx-auto">
