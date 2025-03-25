@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { SearchCheck, LineChart, Beaker, Target } from 'lucide-react';
@@ -69,7 +68,7 @@ const Process = () => {
               }`}
               style={{ transitionDelay: `${400 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-palette-teal/20 p-3 inline-flex mb-5">
+              <div className="rounded-full bg-palette-lilac/20 p-3 inline-flex mb-5">
                 {step.icon}
               </div>
               <h3 className="text-xl font-semibold mb-3">{step.title}</h3>

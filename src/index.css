@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,10 +16,10 @@
     --primary: 271 59% 31%;    /* Based on purple #541388 */
     --primary-foreground: 43 27% 90%;
 
-    --secondary: 168 65% 91%;   /* Based on teal #D1F2EB - Updated from cream */
+    --secondary: 300 18% 97%;   /* Based on lilac #F8F4F9 - Updated from teal */
     --secondary-foreground: 252 25% 24%;
 
-    --muted: 168 65% 95%;       /* Updated to match new teal */
+    --muted: 300 18% 98%;       /* Updated to match new lilac */
     --muted-foreground: 252 25% 40%;
 
     --accent: 45 100% 50%;     /* Based on yellow #FFD400 */
@@ -29,19 +28,19 @@
     --destructive: 336 98% 43%; /* Based on magenta #D90368 */
     --destructive-foreground: 43 27% 90%;
 
-    --border: 168 65% 85%;      /* Updated to match new teal */
-    --input: 168 65% 85%;       /* Updated to match new teal */
+    --border: 300 18% 90%;      /* Updated to match new lilac */
+    --input: 300 18% 90%;       /* Updated to match new lilac */
     --ring: 271 59% 31%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 168 65% 91%;  /* Updated from cream to teal */
+    --sidebar-background: 300 18% 97%;  /* Updated from teal to lilac */
     --sidebar-foreground: 252 25% 26.1%;
     --sidebar-primary: 252 25% 10%;
-    --sidebar-primary-foreground: 168 65% 91%;  /* Updated */
+    --sidebar-primary-foreground: 300 18% 97%;  /* Updated */
     --sidebar-accent: 252 25% 95.9%;
     --sidebar-accent-foreground: 252 25% 10%;
-    --sidebar-border: 168 65% 91%;  /* Updated */
+    --sidebar-border: 300 18% 97%;  /* Updated */
     --sidebar-ring: 271 59% 31%;
   }
 
