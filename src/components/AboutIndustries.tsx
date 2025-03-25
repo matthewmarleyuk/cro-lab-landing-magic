@@ -16,7 +16,7 @@ const industryData = [
     icon: <Globe className="h-6 w-6 text-white" />,
     name: 'Travel',
     description: 'Improving booking conversions and travel experience flows',
-    color: 'bg-palette-purple'
+    color: 'bg-[#270A56]'
   },
   {
     icon: <Briefcase className="h-6 w-6 text-white" />,
@@ -28,7 +28,7 @@ const industryData = [
     icon: <Droplet className="h-6 w-6 text-white" />,
     name: 'Utilities',
     description: 'Streamlining service selection and customer onboarding',
-    color: 'bg-palette-purple'
+    color: 'bg-[#270A56]'
   },
   {
     icon: <PawPrint className="h-6 w-6 text-white" />,
@@ -40,7 +40,7 @@ const industryData = [
     icon: <Wine className="h-6 w-6 text-white" />,
     name: 'Alcohol & Beverages',
     description: 'Optimizing product discovery and checkout experiences',
-    color: 'bg-palette-purple'
+    color: 'bg-[#270A56]'
   }
 ];
 
