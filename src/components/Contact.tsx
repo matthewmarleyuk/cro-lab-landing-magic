@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -24,7 +25,7 @@ const Contact = () => {
   return <section id="contact" className="py-16 md:py-20 bg-secondary/50 relative">
       <div className="container px-6 mx-auto">
         <div ref={titleRef} className={`text-center max-w-2xl mx-auto mb-16 transition-all duration-700 delay-200 transform ${titleVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-pink-200 border border-pink-300">
+          <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium rounded-full bg-palette-magenta border border-palette-magenta text-white">
             Get Started
           </span>
           <h2 className="heading-lg mb-6">
