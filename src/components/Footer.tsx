@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, MapPin } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -109,31 +109,36 @@ const Footer = () => {
           </div>
           
           <div>
-            <h4 className="font-semibold text-base mb-4">Resources</h4>
+            <h4 className="font-semibold text-base mb-4">Locations</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  CRO Guide
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5" /> Edinburgh
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  A/B Testing Calculator
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5" /> Glasgow
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  Conversion Benchmarks
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5" /> Liverpool
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  Newsletter
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5" /> Manchester
                 </a>
               </li>
               <li>
-                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
-                  Podcast
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5" /> Birmingham
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth flex items-center">
+                  <MapPin className="h-3.5 w-3.5 mr-1.5" /> London
                 </a>
               </li>
             </ul>
