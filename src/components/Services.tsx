@@ -80,8 +80,8 @@ const Services = () => {
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-white/20 p-3 inline-flex mb-5">
-                {React.cloneElement(service.icon, { className: "h-6 w-6 text-white" })}
+              <div className="rounded-full bg-white p-3 inline-flex mb-5">
+                {React.cloneElement(service.icon, { className: "h-6 w-6 text-palette-purple" })}
               </div>
               <h3 className="text-xl font-semibold mb-3 text-white">{service.title}</h3>
               <p className="text-sm text-white/90 mb-4">{service.description}</p>

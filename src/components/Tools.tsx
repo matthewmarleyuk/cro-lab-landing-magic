@@ -68,8 +68,8 @@ const Tools = () => {
               }`}
               style={{ transitionDelay: `${300 + index * 100}ms` }}
             >
-              <div className="rounded-full bg-white/20 p-4 inline-flex mb-5">
-                {React.cloneElement(tool.icon, { className: "h-10 w-10 text-white" })}
+              <div className="rounded-full bg-white p-4 inline-flex mb-5">
+                {React.cloneElement(tool.icon, { className: "h-10 w-10 text-palette-purple" })}
               </div>
               <h3 className="text-xl font-semibold mb-2 text-white">{tool.name}</h3>
               <p className="text-sm text-white/90">{tool.description}</p>

@@ -78,8 +78,8 @@ const About = () => {
                 }`}
                 style={{ transitionDelay: `${400 + index * 100}ms` }}
               >
-                <div className="rounded-full bg-white/20 p-2 inline-flex mb-4">
-                  {React.cloneElement(feature.icon, { className: "h-5 w-5 text-white" })}
+                <div className="rounded-full bg-white p-2 inline-flex mb-4">
+                  {React.cloneElement(feature.icon, { className: "h-5 w-5 text-palette-purple" })}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-white">{feature.title}</h3>
                 <p className="text-sm text-white/90">{feature.description}</p>
