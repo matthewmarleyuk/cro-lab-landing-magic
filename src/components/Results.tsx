@@ -20,7 +20,7 @@ const Results = () => {
       value: '$243K'
     }],
     image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
-    bgColor: '#270A56' // Deep purple
+    bgColor: '#270A56' // Set to #270A56
   }, {
     industry: 'SaaS',
     title: 'Optimizing sign-up flow for 49% more trials',
@@ -32,7 +32,7 @@ const Results = () => {
       value: '-23%'
     }],
     image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
-    bgColor: '#541388' // Original palette purple
+    bgColor: '#270A56' // Set to #270A56
   }, {
     industry: 'Financial Services',
     title: 'Lead form redesign delivers 64% conversion lift',
@@ -44,7 +44,7 @@ const Results = () => {
       value: '+27%'
     }],
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
-    bgColor: '#3B0E5F' // Another shade of purple
+    bgColor: '#270A56' // Set to #270A56
   }];
   const {
     containerRef: casesRef,
