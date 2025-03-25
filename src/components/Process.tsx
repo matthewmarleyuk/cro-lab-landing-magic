@@ -69,8 +69,8 @@ const Process = () => {
               }`}
               style={{ 
                 transitionDelay: `${400 + index * 100}ms`,
-                backgroundColor: index % 2 === 0 ? '#541388' : '#D90368',
-                borderColor: index % 2 === 0 ? 'rgba(84, 19, 136, 0.3)' : 'rgba(217, 3, 104, 0.3)'
+                backgroundColor: index % 2 === 0 ? '#270A56' : '#D90368',
+                borderColor: index % 2 === 0 ? 'rgba(39, 10, 86, 0.3)' : 'rgba(217, 3, 104, 0.3)'
               }}
             >
               <div className="rounded-full bg-white p-3 inline-flex mb-5">

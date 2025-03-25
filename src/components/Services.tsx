@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { MoveRight, Activity, Lightbulb, Beaker, PanelRight, MousePointer, Target } from 'lucide-react';
@@ -13,7 +12,7 @@ const Services = () => {
       title: 'CRO Audit',
       description: 'Comprehensive analysis of your website to identify conversion barriers and opportunities.',
       items: ['User journey mapping', 'Conversion funnel analysis', 'Opportunity prioritization'],
-      bgColor: '#541388' // Purple - first card
+      bgColor: '#270A56' // Changed from #541388 to #270A56
     },
     {
       icon: <Lightbulb className="h-6 w-6" />,
@@ -27,7 +26,7 @@ const Services = () => {
       title: 'UX Research',
       description: 'In-depth user research to understand behaviors, motivations and pain points.',
       items: ['User interviews', 'Usability testing', 'Heatmap & session recording'],
-      bgColor: '#541388' // Purple - third card
+      bgColor: '#270A56' // Changed from #541388 to #270A56
     },
     {
       icon: <PanelRight className="h-6 w-6" />,
@@ -41,7 +40,7 @@ const Services = () => {
       title: 'Website Personalization',
       description: 'Tailored user experiences based on visitor segments and behaviors.',
       items: ['Audience segmentation', 'Dynamic content', 'Behavioral targeting'],
-      bgColor: '#541388' // Purple - fifth card
+      bgColor: '#270A56' // Changed from #541388 to #270A56
     },
     {
       icon: <Target className="h-6 w-6" />,
@@ -113,7 +112,6 @@ const Services = () => {
         </div>
       </div>
       
-      {/* Background elements */}
       <div className="absolute top-1/3 left-0 w-80 h-80 rounded-full bg-palette-purple/10 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-palette-magenta/10 filter blur-3xl -z-10"></div>
     </section>

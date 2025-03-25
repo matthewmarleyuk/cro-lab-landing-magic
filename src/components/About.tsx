@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Beaker, LineChart, SearchCheck, CircleDollarSign } from 'lucide-react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
@@ -18,13 +17,13 @@ const About = () => {
       icon: <LineChart className="h-5 w-5" />,
       title: 'Data-Driven Decisions',
       description: 'Every optimization is backed by comprehensive analytics and user behavior insights.',
-      bgColor: '#541388' // Purple from the palette - top right
+      bgColor: '#270A56' // Changed from #541388 to #270A56 - top right
     },
     {
       icon: <SearchCheck className="h-5 w-5" />,
       title: 'Continuous Testing',
       description: 'Our iterative testing process ensures your website constantly improves over time.',
-      bgColor: '#541388' // Purple from the palette - bottom left
+      bgColor: '#270A56' // Changed from #541388 to #270A56 - bottom left
     },
     {
       icon: <CircleDollarSign className="h-5 w-5" />,
