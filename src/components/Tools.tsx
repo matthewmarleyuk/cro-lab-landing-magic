@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { 
@@ -13,7 +12,7 @@ const Tools = () => {
   
   const tools = [
     {
-      icon: <BarChart className="h-10 w-10" />,
+      icon: <img src="/lovable-uploads/16dde16b-05cc-4b2a-beef-ce09a18b3e32.png" alt="VWO" className="h-10 w-10" />,
       name: 'VWO',
       description: 'A/B testing and experimentation platform'
     },
