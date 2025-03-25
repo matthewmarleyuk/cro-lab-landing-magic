@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { 
@@ -26,7 +27,7 @@ const Tools = () => {
       description: 'Session replay and user experience analytics'
     },
     {
-      icon: <LineChart className="h-10 w-10" />,
+      icon: <img src="/lovable-uploads/a58f1534-749d-48c5-b82b-e82f8b9cd0ae.png" alt="Google Analytics" className="h-10 w-10 object-contain" />,
       name: 'Google Analytics',
       description: 'Web analytics and conversion tracking'
     },
