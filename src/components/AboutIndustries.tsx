@@ -7,37 +7,37 @@ import { Heart, Briefcase, Globe, Droplet, PawPrint, Wine } from 'lucide-react';
 
 const industryData = [
   {
-    icon: <Heart className="h-6 w-6 text-white" />,
+    icon: <Heart className="h-6 w-6" />,
     name: 'Healthcare',
     description: 'Optimizing patient journeys and healthcare service conversions',
     color: 'bg-palette-magenta'
   },
   {
-    icon: <Globe className="h-6 w-6 text-white" />,
+    icon: <Globe className="h-6 w-6" />,
     name: 'Travel',
     description: 'Improving booking conversions and travel experience flows',
     color: 'bg-[#270A56]'
   },
   {
-    icon: <Briefcase className="h-6 w-6 text-white" />,
+    icon: <Briefcase className="h-6 w-6" />,
     name: 'Finance',
     description: 'Enhancing financial service signups and application completions',
     color: 'bg-palette-magenta'
   },
   {
-    icon: <Droplet className="h-6 w-6 text-white" />,
+    icon: <Droplet className="h-6 w-6" />,
     name: 'Utilities',
     description: 'Streamlining service selection and customer onboarding',
     color: 'bg-[#270A56]'
   },
   {
-    icon: <PawPrint className="h-6 w-6 text-white" />,
+    icon: <PawPrint className="h-6 w-6" />,
     name: 'Pet Industry',
     description: 'Boosting pet product sales and service engagement',
     color: 'bg-palette-magenta'
   },
   {
-    icon: <Wine className="h-6 w-6 text-white" />,
+    icon: <Wine className="h-6 w-6" />,
     name: 'Alcohol & Beverages',
     description: 'Optimizing product discovery and checkout experiences',
     color: 'bg-[#270A56]'
@@ -79,8 +79,10 @@ const AboutIndustries = () => {
               }`}
             >
               <CardContent className={`p-8 ${industry.color} text-white rounded-xl`}>
-                <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-6">
-                  {industry.icon}
+                <div className="h-12 w-12 rounded-full bg-white flex items-center justify-center mb-6">
+                  <div className={`${industry.color === 'bg-palette-magenta' ? 'text-palette-magenta' : 'text-[#270A56]'}`}>
+                    {industry.icon}
+                  </div>
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">{industry.name}</h3>
                 <p className="text-white/90">{industry.description}</p>
