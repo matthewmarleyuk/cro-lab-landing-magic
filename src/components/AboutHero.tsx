@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Container } from '@/components/ui/container';
@@ -8,8 +7,7 @@ const AboutHero = () => {
   const { ref: subtitleRef, isVisible: subtitleVisible } = useFadeIn(0.2);
   
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[#F8F4F9] -z-10" />
+    <section className="py-24 md:py-32 relative overflow-hidden bg-background">
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-palette-lilac/20 filter blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-palette-purple/10 filter blur-3xl -z-10" />
       

@@ -21,7 +21,7 @@ const AboutExperience = () => {
   } = useFadeIn(0.3);
 
   return (
-    <section className="py-20 md:py-28">
+    <section className="py-20 md:py-28 bg-background">
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div 

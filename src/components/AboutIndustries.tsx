@@ -49,7 +49,7 @@ const AboutIndustries = () => {
   const { containerRef, visibleItems } = useStaggeredAnimation(industryData, 100);
   
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-white to-[#F8F4F9]">
+    <section className="py-20 md:py-28 bg-background">
       <Container>
         <div 
           ref={titleRef}

@@ -13,7 +13,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <main>
+      <main className="bg-background">
         <AboutHero />
         <AboutExperience />
         <AboutIndustries />
