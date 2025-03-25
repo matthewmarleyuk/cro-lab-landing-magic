@@ -35,7 +35,7 @@ function AvatarGroup() {
         />
       </div>
       <p className="px-2 text-xs text-muted-foreground">
-        Trusted by <strong className="font-medium text-foreground">60K+</strong> developers.
+        Loved by <strong className="font-medium text-foreground">100's</strong> of clients.
       </p>
     </div>
   );
