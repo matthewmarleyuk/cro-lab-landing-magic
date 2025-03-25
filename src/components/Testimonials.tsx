@@ -56,10 +56,14 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={testimonial.name}
-              className={`rounded-xl p-8 transition-all duration-500 transform bg-palette-purple text-white border border-palette-purple/30 shadow-md hover:shadow-lg ${
+              className={`rounded-xl p-8 transition-all duration-500 transform text-white border shadow-md hover:shadow-lg ${
                 testimonialsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
-              style={{ transitionDelay: `${400 + index * 100}ms` }}
+              style={{ 
+                transitionDelay: `${400 + index * 100}ms`,
+                backgroundColor: index % 2 === 0 ? '#541388' : '#D90368',
+                borderColor: index % 2 === 0 ? 'rgba(84, 19, 136, 0.3)' : 'rgba(217, 3, 104, 0.3)'
+              }}
             >
               <div className="flex mb-4">
                 {[...Array(testimonial.stars)].map((_, i) => (

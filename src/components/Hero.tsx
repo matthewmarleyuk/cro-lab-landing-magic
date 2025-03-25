@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, LineChart, BarChart, TrendingUp, ArrowUpRight } from 'lucide-react';
@@ -78,16 +79,20 @@ const Hero = () => {
             {statsItems.map((stat, index) => (
               <div 
                 key={stat.label}
-                className={`glass-card rounded-xl p-6 flex flex-col items-center transition-all duration-500 transform ${
+                className={`rounded-xl p-6 flex flex-col items-center transition-all duration-500 transform text-white ${
                   statsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-16'
                 }`}
-                style={{ transitionDelay: `${700 + index * 100}ms` }}
+                style={{ 
+                  transitionDelay: `${700 + index * 100}ms`,
+                  backgroundColor: index % 2 === 0 ? '#541388' : '#D90368',
+                  borderColor: index % 2 === 0 ? 'rgba(84, 19, 136, 0.3)' : 'rgba(217, 3, 104, 0.3)'
+                }}
               >
-                <div className="rounded-full bg-palette-cream p-2 mb-3">
+                <div className="rounded-full bg-white p-2 mb-3">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold mb-1 text-palette-purple">{stat.value}</div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
+                <div className="text-3xl font-bold mb-1 text-white">{stat.value}</div>
+                <div className="text-sm text-white/90">{stat.label}</div>
               </div>
             ))}
           </div>
