@@ -90,7 +90,7 @@ const Contact = () => {
               </ul>
             </div>
             
-            <div className="rounded-xl p-6 md:p-8">
+            <div className="rounded-xl p-6 md:p-8 bg-[#270a56]">
               <h3 className="text-xl font-semibold mb-6">Contact information</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
