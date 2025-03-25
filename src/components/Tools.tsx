@@ -1,7 +1,7 @@
+
 import React from 'react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import { 
-  BarChart, 
   LineChart,
   Activity,
   Eye
@@ -12,7 +12,7 @@ const Tools = () => {
   
   const tools = [
     {
-      icon: <img src="/lovable-uploads/16dde16b-05cc-4b2a-beef-ce09a18b3e32.png" alt="VWO" className="h-10 w-10" />,
+      icon: <img src="/lovable-uploads/16dde16b-05cc-4b2a-beef-ce09a18b3e32.png" alt="VWO" className="h-10 w-10 object-contain" />,
       name: 'VWO',
       description: 'A/B testing and experimentation platform'
     },
@@ -62,7 +62,7 @@ const Tools = () => {
           {tools.map((tool, index) => (
             <div 
               key={tool.name}
-              className={`rounded-xl p-8 transition-all duration-500 transform border shadow-md hover:shadow-lg hover:-translate-y-1 text-white ${
+              className={`rounded-xl transition-all duration-500 transform border hover:shadow-lg hover:-translate-y-1 ${
                 toolsVisible[index] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ 
@@ -71,11 +71,17 @@ const Tools = () => {
                 borderColor: index % 2 === 0 ? 'rgba(84, 19, 136, 0.3)' : 'rgba(217, 3, 104, 0.3)'
               }}
             >
-              <div className="rounded-full bg-white p-4 inline-flex mb-5">
-                {React.cloneElement(tool.icon, { className: "h-10 w-10 text-palette-purple" })}
+              <div className="flex flex-col h-full">
+                <div className="bg-white rounded-t-xl p-6 flex items-center justify-center">
+                  <div className="w-16 h-16 flex items-center justify-center">
+                    {tool.icon}
+                  </div>
+                </div>
+                <div className="p-6 text-white">
+                  <h3 className="text-xl font-semibold mb-2">{tool.name}</h3>
+                  <p className="text-sm text-white/90">{tool.description}</p>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-white">{tool.name}</h3>
-              <p className="text-sm text-white/90">{tool.description}</p>
             </div>
           ))}
         </div>
