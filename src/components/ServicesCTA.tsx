@@ -4,15 +4,18 @@ import { useFadeIn } from '@/lib/animations';
 import { Button } from '@/components/ui/button';
 import { ChevronRight, BarChart, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
 const ServicesCTA = () => {
   const {
     ref: ctaRef,
     isVisible: ctaVisible
   } = useFadeIn(0.1);
-  return <section className="py-16 md:py-20 relative overflow-hidden">
+
+  return (
+    <section className="py-16 md:py-20 relative overflow-hidden">
       <div className="absolute inset-0 -z-10" style={{
-      backgroundColor: '#270A56'
-    }}></div>
+        backgroundColor: '#270A56'
+      }}></div>
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-palette-magenta/20 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
       
@@ -20,8 +23,8 @@ const ServicesCTA = () => {
         <div ref={ctaRef} className={`max-w-3xl mx-auto text-center transition-all duration-700 delay-300 transform ${ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6 bg-white">
             <BarChart className="h-8 w-8" style={{
-            color: '#270A56'
-          }} />
+              color: '#270A56'
+            }} />
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white text-balance">
@@ -56,6 +59,8 @@ const ServicesCTA = () => {
           </Link>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default ServicesCTA;

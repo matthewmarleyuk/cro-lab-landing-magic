@@ -7,9 +7,13 @@ import ServicesShowcase from '@/components/ServicesShowcase';
 import Testimonials from '@/components/Testimonials';
 import Process from '@/components/Process';
 import ServicesCTA from '@/components/ServicesCTA';
+import ServicesCTAMobile from '@/components/ServicesCTAMobile';
 import ServicesFAQ from '@/components/ServicesFAQ';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Services = () => {
+  const isMobile = useIsMobile();
+
   useEffect(() => {
     // Set page title
     document.title = 'Services - The CRO Lab';
@@ -28,7 +32,7 @@ const Services = () => {
         <ServicesShowcase />
         <Testimonials />
         <Process />
-        <ServicesCTA />
+        {isMobile ? <ServicesCTAMobile /> : <ServicesCTA />}
         <ServicesFAQ />
       </main>
       <Footer />
