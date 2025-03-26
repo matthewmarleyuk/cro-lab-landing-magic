@@ -12,6 +12,9 @@ import London from '@/pages/London';
 import Contact from '@/pages/Contact';
 import Services from '@/pages/Services';
 import AboutUs from '@/pages/AboutUs';
+import PrivacyPolicy from '@/pages/PrivacyPolicy';
+import TermsOfService from '@/pages/TermsOfService';
+import CookiePolicy from '@/pages/CookiePolicy';
 import './App.css';
 
 function App() {
@@ -27,6 +30,9 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/services" element={<Services />} />
       <Route path="/about" element={<AboutUs />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-of-service" element={<TermsOfService />} />
+      <Route path="/cookie-policy" element={<CookiePolicy />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   );

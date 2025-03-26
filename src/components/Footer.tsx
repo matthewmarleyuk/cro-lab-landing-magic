@@ -141,15 +141,15 @@ const Footer = () => {
             © {new Date().getFullYear()} The CRO Lab. All rights reserved.
           </div>
           <div className="flex space-x-6">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+            <Link to="/privacy-policy" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
               Privacy Policy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+            </Link>
+            <Link to="/terms-of-service" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
               Terms of Service
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
+            </Link>
+            <Link to="/cookie-policy" className="text-sm text-muted-foreground hover:text-foreground transition-smooth">
               Cookie Policy
-            </a>
+            </Link>
           </div>
         </div>
       </div>

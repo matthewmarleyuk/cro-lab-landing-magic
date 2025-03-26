@@ -9,14 +9,14 @@ const toAbsolute = (p) => path.resolve(__dirname, p)
 const template = fs.readFileSync(toAbsolute('dist/index.html'), 'utf-8')
 const { render } = await import('./dist/server/entry-server.js')
 
-// Add About Us to the routes to prerender
+// Add the new policy pages to the routes to prerender
 const routesToPrerender = fs
   .readdirSync(toAbsolute('src/pages'))
   .map((file) => {
     const name = file.replace(/\.tsx$/, '').toLowerCase()
-    return name === 'index' ? '/' : `/${name}`
+    return name === 'index' ? '/' : `/${name.replace(/([A-Z])/g, '-$1').toLowerCase()}`
   })
-  .filter(route => route !== '/notfound') // Exclude NotFound from prerendering
+  .filter(route => route !== '/not-found') // Exclude NotFound from prerendering
 
 ;(async () => {
   for (const url of routesToPrerender) {
