@@ -19,7 +19,7 @@ const Process = () => {
     description: "We analyze test results using statistical methods to extract actionable insights for your business."
   }, {
     number: 4,
-    title: "Implementation & Iteration",
+    title: "Implementation",
     description: "We implement winning variations and continuously iterate to drive ongoing conversion improvements."
   }];
   const {
