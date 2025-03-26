@@ -7,7 +7,7 @@ const ServicesHero = () => {
   const { ref, isVisible } = useFadeIn(0.1);
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden">
+    <section className="pt-32 pb-16 md:pt-40 md:pb-24 relative overflow-hidden">
       <Container>
         <div 
           ref={ref} 
