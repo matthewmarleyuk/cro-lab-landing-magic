@@ -19,7 +19,7 @@ const Testimonials = () => {
   }, {
     name: "Emma Rodriguez",
     position: "Digital Director, HealthPlus",
-    content: "We've worked with several CRO agencies in the past, but none have delivered the level of results and insights that The CRO Lab has. Their process is thorough and effective.",
+    content: "We've worked with several CRO agencies in the past, but none have delivered the level of results and insights that The CRO Lab has. Their process is thorough and effective when it comes to CRO.",
     stars: 5
   }];
   const {
