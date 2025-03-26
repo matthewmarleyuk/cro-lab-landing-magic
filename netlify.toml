@@ -1,0 +1,21 @@
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Ensure all routes are handled by the SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Set Node.js version
+[build.environment]
+  NODE_VERSION = "18"
+
+# Add headers
+[[headers]]
+  for = "/*"
+    [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
