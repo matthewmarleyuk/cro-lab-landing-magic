@@ -16,7 +16,7 @@ const ServicesCTA = () => {
       <div className="absolute top-0 right-0 w-80 h-80 rounded-full bg-palette-magenta/20 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
       
-      <div className="container mx-auto relative z-10 py-[44px] bg-[#160457] rounded-2xl px-8 md:px-6 max-w-[92%] md:max-w-none">
+      <div className="container mx-auto relative z-10 py-[44px] bg-[#160457] rounded-2xl px-8 md:px-6 max-w-[92%] md:max-w-[94%] lg:max-w-[90%]">
         <div ref={ctaRef} className={`max-w-3xl mx-auto text-center transition-all duration-700 delay-300 transform ${ctaVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="rounded-full h-16 w-16 flex items-center justify-center mx-auto mb-6 bg-white">
             <BarChart className="h-8 w-8" style={{
