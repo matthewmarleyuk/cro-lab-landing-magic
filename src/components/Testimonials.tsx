@@ -9,7 +9,7 @@ const Testimonials = () => {
   const testimonials = [{
     name: "Sarah Johnson",
     position: "Marketing Director, TechCorp",
-    content: "The CRO Lab completely transformed our approach to conversion rate optimization. Their data-driven methodology helped us increase conversions by 34% in just two months.",
+    content: "The CRO Lab completely transformed our approach to conversion rate optimization. Their data-driven methodology and expert analysis helped us increase conversions by 34% in just two months.",
     stars: 5
   }, {
     name: "Michael Chen",
