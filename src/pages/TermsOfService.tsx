@@ -1,9 +1,19 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const TermsOfService = () => {
+  useEffect(() => {
+    // Set page title
+    document.title = 'Terms of Service - The CRO Lab';
+    // Add meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read our terms of service to understand the conditions for using our services and website.');
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

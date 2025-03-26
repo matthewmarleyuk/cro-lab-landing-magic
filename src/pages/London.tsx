@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { ChevronRight, MapPin, TrendingUp, BarChart, LineChart } from 'lucide-react';
+import { ChevronRight, MapPin } from 'lucide-react';
 import { useFadeIn, useStaggeredAnimation } from '@/lib/animations';
 import LondonAbout from '@/components/LondonAbout';
 import LondonServices from '@/components/LondonServices';
@@ -17,7 +17,12 @@ import { AvatarGroup } from '@/components/ui/avatar-group';
 const London = () => {
   useEffect(() => {
     // Set page title with keyword for SEO
-    document.title = 'CRO Agency London | The CRO Lab | Conversion Rate Optimization';
+    document.title = 'CRO Agency London - The CRO Lab';
+    // Add meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'The CRO Lab London helps local businesses optimize their websites to convert more visitors into customers through scientific testing and data analysis.');
+    }
   }, []);
 
   const {

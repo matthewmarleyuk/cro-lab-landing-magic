@@ -13,8 +13,13 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   useEffect(() => {
-    // Set page title
-    document.title = 'The CRO Lab | Conversion Rate Optimization Agency';
+    // Update page title
+    document.title = 'CRO Agency - The CRO Lab';
+    // Add meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'The CRO Lab helps businesses optimize their websites to convert more visitors into customers through scientific testing and data analysis.');
+    }
   }, []);
 
   return (

@@ -1,9 +1,19 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 const PrivacyPolicy = () => {
+  useEffect(() => {
+    // Set page title
+    document.title = 'Privacy Policy - The CRO Lab';
+    // Add meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Our privacy policy outlines how we collect, use, and protect your personal information.');
+    }
+  }, []);
+
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
