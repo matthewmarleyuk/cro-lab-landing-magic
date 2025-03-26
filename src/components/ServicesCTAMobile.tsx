@@ -14,7 +14,7 @@ const ServicesCTAMobile = () => {
       <div className="absolute top-0 right-0 w-40 h-40 rounded-full bg-palette-magenta/20 filter blur-3xl -z-10"></div>
       <div className="absolute bottom-0 left-0 w-40 h-40 rounded-full bg-palette-purple/20 filter blur-3xl -z-10"></div>
       
-      <div className="container mx-auto relative z-10 py-8 bg-[#160457] rounded-xl px-5">
+      <div className="mx-auto max-w-[90%] sm:max-w-[85%] relative z-10 py-8 bg-[#160457] rounded-xl px-4">
         <div 
           ref={ctaRef} 
           className={`mx-auto text-center transition-all duration-700 delay-300 transform ${
