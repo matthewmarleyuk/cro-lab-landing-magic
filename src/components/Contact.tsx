@@ -20,7 +20,7 @@ const Contact = () => {
     isVisible: infoVisible
   } = useFadeIn(0.1);
 
-  const benefits = ['Free conversion audit for new clients', 'No long-term contracts - we earn your business monthly', 'Results-based performance guarantees', 'Direct communication with optimization experts'];
+  const benefits = ['Free conversion audit for new clients', 'No long-term contracts', 'Results-based performance guarantees', 'Direct communication with us'];
 
   return <section id="contact" className="py-16 md:py-20 bg-secondary/50 relative">
       <div className="container px-6 mx-auto">
