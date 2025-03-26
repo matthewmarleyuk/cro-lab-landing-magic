@@ -35,7 +35,7 @@ const Results = () => {
     bgColor: '#270A56' // Set to #270A56
   }, {
     industry: 'Financial Services',
-    title: 'Lead form redesign delivers 64% conversion lift',
+    title: '64% uplift in lead form completions',
     metrics: [{
       label: 'Form Completion',
       value: '+64%'
