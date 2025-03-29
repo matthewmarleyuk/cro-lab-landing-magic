@@ -4,9 +4,12 @@ import { motion } from "framer-motion";
 import { MoveRight, ChevronRight, TrendingUp, DollarSign, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AvatarGroup } from "@/components/ui/avatar-group";
+import { Link } from "react-router-dom";
+
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(() => ["Conversions", "Sales", "Revenue", "Growth", "Results"], []);
+  
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (titleNumber === titles.length - 1) {
@@ -17,6 +20,7 @@ function Hero() {
     }, 2000);
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
+  
   return <div className="w-full relative min-h-screen flex items-center pt-6 pb-2 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/75 to-background"></div>
@@ -59,10 +63,12 @@ function Hero() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
-            <Button size="lg" className="rounded-full px-6 py-6 text-base bg-palette-magenta hover:bg-palette-magenta/90">
-              Get Free Analysis
-              <ChevronRight className="ml-1 h-5 w-5" />
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" className="rounded-full px-6 py-6 text-base bg-palette-magenta hover:bg-palette-magenta/90">
+                Get Free Analysis
+                <ChevronRight className="ml-1 h-5 w-5" />
+              </Button>
+            </Link>
             <Button variant="outline" size="lg" className="rounded-full px-6 py-6 text-base border-palette-purple text-palette-purple hover:bg-palette-purple/10">
               See Our Services
               <MoveRight className="ml-1 h-5 w-5" />
