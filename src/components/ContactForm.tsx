@@ -20,6 +20,8 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters")
 });
 
+const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/55e92f25-28d2-4af3-9898-4f6d08803620";
+
 const ContactForm = () => {
   const { ref: formSectionRef, isVisible: formSectionVisible } = useFadeIn();
   const { toast } = useToast();
@@ -35,13 +37,40 @@ const ContactForm = () => {
     }
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  async function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    form.reset();
+    
+    try {
+      // Send form data to webhook
+      const response = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...values,
+          formName: "Contact Form",
+          submittedAt: new Date().toISOString(),
+          page: window.location.pathname
+        }),
+      });
+      
+      console.log("Webhook response:", response);
+      
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+      
+      form.reset();
+    } catch (error) {
+      console.error("Error sending form data to webhook:", error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    }
   }
 
   const benefits = [

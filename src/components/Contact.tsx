@@ -1,10 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
+import { useToast } from "@/hooks/use-toast";
+
+const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/55e92f25-28d2-4af3-9898-4f6d08803620";
 
 const Contact = () => {
   const {
@@ -19,6 +22,67 @@ const Contact = () => {
     ref: infoRef,
     isVisible: infoVisible
   } = useFadeIn(0.1);
+
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    website: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Send form data to webhook
+      const response = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          formName: "Contact Form (Home)",
+          submittedAt: new Date().toISOString(),
+          page: window.location.pathname
+        }),
+      });
+      
+      console.log("Webhook response:", response);
+      
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you as soon as possible.",
+      });
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        website: '',
+        message: ''
+      });
+    } catch (error) {
+      console.error("Error sending form data to webhook:", error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   const benefits = ['Free conversion audit for new clients', 'No long-term contracts', 'Results-based performance guarantees', 'Direct communication with us'];
 
@@ -39,19 +103,33 @@ const Contact = () => {
         <div className="grid md:grid-cols-5 gap-10 max-w-5xl mx-auto">
           <div ref={formRef} className={`md:col-span-3 glass-card rounded-xl p-6 md:p-8 transition-all duration-700 delay-400 transform ${formVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}>
             <h3 className="text-xl font-semibold mb-6">Send us a message</h3>
-            <form className="space-y-5">
+            <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
                   <label htmlFor="firstName" className="text-sm font-medium">
                     First Name
                   </label>
-                  <Input id="firstName" className="rounded-lg" placeholder="John" />
+                  <Input 
+                    id="firstName" 
+                    className="rounded-lg" 
+                    placeholder="John" 
+                    value={formData.firstName}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="space-y-2">
                   <label htmlFor="lastName" className="text-sm font-medium">
                     Last Name
                   </label>
-                  <Input id="lastName" className="rounded-lg" placeholder="Doe" />
+                  <Input 
+                    id="lastName" 
+                    className="rounded-lg" 
+                    placeholder="Doe" 
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
               </div>
               
@@ -59,26 +137,52 @@ const Contact = () => {
                 <label htmlFor="email" className="text-sm font-medium">
                   Email
                 </label>
-                <Input id="email" type="email" className="rounded-lg" placeholder="john@company.com" />
+                <Input 
+                  id="email" 
+                  type="email" 
+                  className="rounded-lg" 
+                  placeholder="john@company.com" 
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="website" className="text-sm font-medium">
                   Website URL
                 </label>
-                <Input id="website" className="rounded-lg" placeholder="https://yourwebsite.com" />
+                <Input 
+                  id="website" 
+                  className="rounded-lg" 
+                  placeholder="https://yourwebsite.com" 
+                  value={formData.website}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               
               <div className="space-y-2">
                 <label htmlFor="message" className="text-sm font-medium">
                   How can we help?
                 </label>
-                <Textarea id="message" className="rounded-lg min-h-[120px]" placeholder="Tell us about your conversion goals..." />
+                <Textarea 
+                  id="message" 
+                  className="rounded-lg min-h-[120px]" 
+                  placeholder="Tell us about your conversion goals..." 
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                />
               </div>
               
-              <Button type="submit" className="w-full rounded-lg">
-                Send Message
-                <ArrowRight className="ml-2 h-4 w-4" />
+              <Button 
+                type="submit" 
+                className="w-full rounded-lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {!isSubmitting && <ArrowRight className="ml-2 h-4 w-4" />}
               </Button>
             </form>
           </div>
