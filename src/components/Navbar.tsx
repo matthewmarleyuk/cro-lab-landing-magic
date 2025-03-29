@@ -25,6 +25,13 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const navLinks = [
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
@@ -42,6 +49,7 @@ const Navbar = () => {
         <Link 
           to="/" 
           className="flex items-center space-x-2"
+          onClick={scrollToTop}
         >
           <img 
             src="/lovable-uploads/0d5fa8dc-4fca-47f2-89cc-8d9791774f03.png" 
@@ -72,16 +80,19 @@ const Navbar = () => {
                   key={link.name}
                   to={link.href}
                   className="text-sm font-medium text-foreground/80 hover:text-palette-purple transition-smooth"
+                  onClick={scrollToTop}
                 >
                   {link.name}
                 </Link>
               )
             ))}
           </nav>
-          <Button className="rounded-full bg-palette-magenta hover:bg-palette-magenta/90">
-            Get Started
-            <ChevronRight className="ml-1 h-4 w-4" />
-          </Button>
+          <Link to="/contact" onClick={scrollToTop}>
+            <Button className="rounded-full bg-palette-magenta hover:bg-palette-magenta/90">
+              Get Started
+              <ChevronRight className="ml-1 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
         
         {/* Mobile menu button */}
@@ -125,7 +136,10 @@ const Navbar = () => {
                   <Link
                     to={link.href}
                     className="block py-2 px-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 hover:text-palette-purple"
-                    onClick={() => setMobileMenuOpen(false)}
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     {link.name}
                   </Link>
@@ -133,13 +147,17 @@ const Navbar = () => {
               </li>
             ))}
             <li className="mt-3 mb-2">
-              <Button 
-                className="w-full rounded-lg bg-palette-magenta hover:bg-palette-magenta/90 text-white py-2"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Get Started
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Button>
+              <Link to="/contact" onClick={() => {
+                setMobileMenuOpen(false);
+                scrollToTop();
+              }}>
+                <Button 
+                  className="w-full rounded-lg bg-palette-magenta hover:bg-palette-magenta/90 text-white py-2"
+                >
+                  Get Started
+                  <ChevronRight className="ml-1 h-4 w-4" />
+                </Button>
+              </Link>
             </li>
           </ul>
         </div>
