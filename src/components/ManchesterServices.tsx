@@ -12,7 +12,7 @@ const ManchesterServices = () => {
       icon: <Activity className="h-6 w-6" />,
       title: 'CRO Audit',
       description: 'Comprehensive analysis of your website to identify conversion barriers and opportunities.',
-      items: ['User journey mapping', 'Conversion funnel analysis', 'Opportunity prioritization'],
+      items: ['User journey mapping', 'Conversion funnel analysis', 'Opportunity prioritisation'],
       bgColor: '#270A56'
     },
     {
@@ -25,22 +25,22 @@ const ManchesterServices = () => {
     {
       icon: <Beaker className="h-6 w-6" />,
       title: 'UX Research',
-      description: 'In-depth user research to understand behaviors, motivations and pain points.',
+      description: 'In-depth user research to understand behaviours, motivations and pain points.',
       items: ['User interviews', 'Usability testing', 'Heatmap & session recording'],
       bgColor: '#270A56'
     },
     {
       icon: <PanelRight className="h-6 w-6" />,
-      title: 'Landing Page Optimization',
-      description: 'Targeted improvements for your highest-value pages to maximize conversions.',
-      items: ['Value proposition clarity', 'Persuasive content creation', 'Form optimization'],
+      title: 'Landing Page Optimisation',
+      description: 'Targeted improvements for your highest-value pages to maximise conversions.',
+      items: ['Value proposition clarity', 'Persuasive content creation', 'Form optimisation'],
       bgColor: '#D90368'
     },
     {
       icon: <MousePointer className="h-6 w-6" />,
-      title: 'Website Personalization',
-      description: 'Tailored user experiences based on visitor segments and behaviors.',
-      items: ['Audience segmentation', 'Dynamic content', 'Behavioral targeting'],
+      title: 'Website Personalisation',
+      description: 'Tailored user experiences based on visitor segments and behaviours.',
+      items: ['Audience segmentation', 'Dynamic content', 'Behavioural targeting'],
       bgColor: '#270A56'
     },
     {
@@ -70,7 +70,7 @@ const ManchesterServices = () => {
             Manchester CRO solutions for measurable growth
           </h2>
           <p className="body-md text-muted-foreground">
-            We offer Manchester businesses end-to-end optimization services designed to systematically improve conversion rates and drive business growth.
+            We offer Manchester businesses end-to-end optimisation services designed to systematically improve conversion rates and drive business growth.
           </p>
         </div>
         

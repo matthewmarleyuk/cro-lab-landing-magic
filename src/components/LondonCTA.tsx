@@ -25,11 +25,11 @@ const LondonCTA = () => {
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white text-balance">
-            Ready to optimize your London website?
+            Ready to optimise your London website?
           </h2>
           
           <p className="text-lg text-white/90 mb-8 text-balance">
-            Let our London CRO specialists help you convert more visitors into customers with data-driven optimization strategies.
+            Let our London CRO specialists help you convert more visitors into customers with data-driven optimisation strategies.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">

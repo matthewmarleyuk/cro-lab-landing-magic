@@ -9,21 +9,21 @@ const EdinburghServices = () => {
   const services = [
     {
       icon: <BarChart3 className="h-5 w-5" />,
-      title: "Landing Page Optimization",
-      description: "We optimize your landing pages to maximize conversions from Edinburgh traffic sources.",
+      title: "Landing Page Optimisation",
+      description: "We optimise your landing pages to maximise conversions from Edinburgh traffic sources.",
       features: ["A/B testing", "Heat mapping", "Conversion funnel analysis"]
     },
     {
       icon: <MousePointer className="h-5 w-5" />,
       title: "E-commerce CRO",
       description: "Increase sales and average order value for your Edinburgh e-commerce business.",
-      features: ["Product page optimization", "Checkout flow improvement", "Cross-sell optimization"]
+      features: ["Product page optimisation", "Checkout flow improvement", "Cross-sell optimisation"]
     },
     {
       icon: <Users className="h-5 w-5" />,
       title: "User Experience Research",
       description: "Understand how Edinburgh customers interact with your website to identify friction points.",
-      features: ["User testing with Edinburgh consumers", "Session recordings", "Behavior analytics"]
+      features: ["User testing with Edinburgh consumers", "Session recordings", "Behaviour analytics"]
     },
     {
       icon: <LineChart className="h-5 w-5" />,
@@ -34,8 +34,8 @@ const EdinburghServices = () => {
     {
       icon: <PieChart className="h-5 w-5" />,
       title: "Multi-variant Testing",
-      description: "Sophisticated testing frameworks to optimize multiple variables simultaneously.",
-      features: ["Statistical analysis", "Segment testing", "Long-term testing programs"]
+      description: "Sophisticated testing frameworks to optimise multiple variables simultaneously.",
+      features: ["Statistical analysis", "Segment testing", "Long-term testing programmes"]
     },
     {
       icon: <CheckCircle className="h-5 w-5" />,
@@ -60,10 +60,10 @@ const EdinburghServices = () => {
             Edinburgh CRO Services
           </span>
           <h2 className="heading-lg mb-6 text-balance">
-            Specialized CRO services for Edinburgh businesses
+            Specialised CRO services for Edinburgh businesses
           </h2>
           <p className="body-md text-muted-foreground text-balance px-0">
-            Our Edinburgh team delivers tailored conversion rate optimization services to help local businesses thrive online.
+            Our Edinburgh team delivers tailored conversion rate optimisation services to help local businesses thrive online.
           </p>
         </div>
         

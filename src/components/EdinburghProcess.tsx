@@ -9,7 +9,7 @@ const EdinburghProcess = () => {
     {
       number: 1,
       title: "Discovery",
-      description: "We analyze your Edinburgh audience data, identify local user behavior patterns, and uncover conversion opportunities."
+      description: "We analyse your Edinburgh audience data, identify local user behaviour patterns, and uncover conversion opportunities."
     },
     {
       number: 2,
@@ -43,7 +43,7 @@ const EdinburghProcess = () => {
             Our Edinburgh Process
           </span>
           <h2 className="heading-lg mb-6 text-balance">
-            How we optimize Edinburgh websites
+            How we optimise Edinburgh websites
           </h2>
           <p className="body-md text-muted-foreground text-balance px-0">
             Our Edinburgh-focused methodology delivers conversion improvements through a proven four-step process.
