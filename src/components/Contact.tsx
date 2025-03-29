@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -8,7 +7,7 @@ import { CheckCircle, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
 
-const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/incoming-lead";
+const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook/incoming-lead";
 
 const Contact = () => {
   const {
