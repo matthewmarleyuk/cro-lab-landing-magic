@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -44,12 +45,13 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // Send form data to webhook
+      // Send form data to webhook with no-cors mode
       const response = await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
+        mode: "no-cors", // Add this to handle CORS issues
         body: JSON.stringify({
           ...formData,
           formName: "Contact Form (Home)",
