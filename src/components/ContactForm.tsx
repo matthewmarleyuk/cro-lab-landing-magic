@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Container } from '@/components/ui/container';
@@ -40,31 +39,42 @@ const ContactForm = () => {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    console.log("Submitting form with values:", values);
     
     try {
+      // Prepare the payload for the webhook
+      const payload = {
+        ...values,
+        formName: "Contact Form",
+        submittedAt: new Date().toISOString(),
+        page: window.location.pathname
+      };
+      
+      console.log("Sending payload to webhook:", payload);
+      
       // Send form data to webhook with no-cors mode
-      const response = await fetch(WEBHOOK_URL, {
+      await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors", // Add this to handle CORS issues
-        body: JSON.stringify({
-          ...values,
-          formName: "Contact Form",
-          submittedAt: new Date().toISOString(),
-          page: window.location.pathname
-        }),
+        mode: "no-cors", // Required for cross-origin requests without CORS
+        body: JSON.stringify(payload),
       });
       
-      console.log("Webhook response:", response);
+      // With no-cors mode, we don't get a proper response to check
+      // We'll assume success and show a toast message
+      console.log("Webhook request sent successfully");
       
       toast({
         title: "Message sent!",
         description: "We'll get back to you as soon as possible.",
       });
       
+      // Reset the form
+      form.reset();
+      
+      // Navigate to thank you page
       navigate("/thank-you");
     } catch (error) {
       console.error("Error sending form data to webhook:", error);

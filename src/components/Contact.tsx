@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -43,24 +42,32 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log("Submitting form with data:", formData);
 
     try {
+      // Prepare the payload for the webhook
+      const payload = {
+        ...formData,
+        formName: "Contact Form (Home)",
+        submittedAt: new Date().toISOString(),
+        page: window.location.pathname
+      };
+      
+      console.log("Sending payload to webhook:", payload);
+      
       // Send form data to webhook with no-cors mode
-      const response = await fetch(WEBHOOK_URL, {
+      await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        mode: "no-cors", // Add this to handle CORS issues
-        body: JSON.stringify({
-          ...formData,
-          formName: "Contact Form (Home)",
-          submittedAt: new Date().toISOString(),
-          page: window.location.pathname
-        }),
+        mode: "no-cors", // Required for cross-origin requests without CORS
+        body: JSON.stringify(payload),
       });
       
-      console.log("Webhook response:", response);
+      // With no-cors mode, we don't get a proper response to check
+      // We'll assume success and show a toast message
+      console.log("Webhook request sent successfully");
       
       toast({
         title: "Message sent!",
