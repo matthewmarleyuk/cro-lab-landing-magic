@@ -69,10 +69,12 @@ function Hero() {
                 <ChevronRight className="ml-1 h-5 w-5" />
               </Button>
             </Link>
-            <Button variant="outline" size="lg" className="rounded-full px-6 py-6 text-base border-palette-purple text-palette-purple hover:bg-palette-purple/10">
-              See Our Services
-              <MoveRight className="ml-1 h-5 w-5" />
-            </Button>
+            <Link to="/services">
+              <Button variant="outline" size="lg" className="rounded-full px-6 py-6 text-base border-palette-purple text-palette-purple hover:bg-palette-purple/10">
+                See Our Services
+                <MoveRight className="ml-1 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
           
           <div className="mt-4">
