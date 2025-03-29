@@ -20,7 +20,7 @@ const formSchema = z.object({
   message: z.string().min(10, "Message must be at least 10 characters")
 });
 
-const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/55e92f25-28d2-4af3-9898-4f6d08803620";
+const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/incoming-lead";
 
 const ContactForm = () => {
   const { ref: formSectionRef, isVisible: formSectionVisible } = useFadeIn();
