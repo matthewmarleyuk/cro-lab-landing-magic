@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -6,6 +5,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
 import { CheckCircle, Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/55e92f25-28d2-4af3-9898-4f6d08803620";
 
@@ -24,6 +24,7 @@ const Contact = () => {
   } = useFadeIn(0.1);
 
   const { toast } = useToast();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -72,6 +73,9 @@ const Contact = () => {
         website: '',
         message: ''
       });
+      
+      // Redirect to thank you page
+      navigate("/thank-you");
     } catch (error) {
       console.error("Error sending form data to webhook:", error);
       toast({
@@ -241,4 +245,5 @@ const Contact = () => {
       <div className="absolute bottom-1/3 right-0 w-80 h-80 rounded-full bg-cro-400/5 filter blur-3xl -z-10"></div>
     </section>;
 };
+
 export default Contact;

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Container } from '@/components/ui/container';
@@ -11,6 +10,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const formSchema = z.object({
   firstName: z.string().min(2, "First name must be at least 2 characters"),
@@ -25,6 +25,7 @@ const WEBHOOK_URL = "https://n8n.agenticadvisory.net/webhook-test/55e92f25-28d2-
 const ContactForm = () => {
   const { ref: formSectionRef, isVisible: formSectionVisible } = useFadeIn();
   const { toast } = useToast();
+  const navigate = useNavigate();
   
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -62,7 +63,7 @@ const ContactForm = () => {
         description: "We'll get back to you as soon as possible.",
       });
       
-      form.reset();
+      navigate("/thank-you");
     } catch (error) {
       console.error("Error sending form data to webhook:", error);
       toast({
