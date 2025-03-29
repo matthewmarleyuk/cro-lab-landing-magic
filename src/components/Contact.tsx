@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { useFadeIn } from '@/lib/animations';
 import { Input } from '@/components/ui/input';
@@ -45,9 +46,15 @@ const Contact = () => {
     console.log("Submitting form with data:", formData);
 
     try {
+      // Format the website URL if needed
+      let formattedData = { ...formData };
+      if (formattedData.website && !formattedData.website.match(/^https?:\/\//)) {
+        formattedData.website = `https://${formattedData.website}`;
+      }
+      
       // Prepare the payload for the webhook
       const payload = {
-        ...formData,
+        ...formattedData,
         formName: "Contact Form (Home)",
         submittedAt: new Date().toISOString(),
         page: window.location.pathname
