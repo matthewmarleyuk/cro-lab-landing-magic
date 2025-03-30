@@ -1,15 +1,12 @@
-
 import { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, ChevronRight, TrendingUp, DollarSign, BarChart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { AvatarGroup } from "@/components/ui/avatar-group";
 import { Link } from "react-router-dom";
-
 function Hero() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(() => ["Conversions", "Sales", "Revenue", "Growth", "Results"], []);
-  
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (titleNumber === titles.length - 1) {
@@ -20,7 +17,6 @@ function Hero() {
     }, 2000);
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
-  
   return <div className="w-full relative min-h-screen flex items-center pt-6 pb-2 overflow-hidden">
       <div className="absolute inset-0 overflow-hidden -z-10">
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-secondary/75 to-background"></div>
@@ -58,9 +54,7 @@ function Hero() {
               </span>
             </h1>
 
-            <p className="md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center text-base">
-              We use data-driven strategies and scientific testing to optimize your website's conversion rate, helping you generate more leads, sales, and revenue without increasing traffic.
-            </p>
+            <p className="md:text-xl leading-relaxed tracking-tight text-muted-foreground max-w-2xl text-center text-base">We use data-driven strategies and scientific testing to optimise your website's conversion rate, helping you generate more leads, sales, and revenue without increasing traffic.</p>
           </div>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-4">
             <Link to="/contact">
